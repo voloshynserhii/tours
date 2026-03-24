@@ -1,5 +1,8 @@
 export { Header } from './Header';
 export { Footer } from './Footer';
+export { ParallaxSection } from './ParallaxSection';
+export { Providers } from './Providers';
+
 export { Button } from './Button';
 export { ContactForm } from './ContactForm';
 export { DictionaryProvider } from './DictionaryProvider';

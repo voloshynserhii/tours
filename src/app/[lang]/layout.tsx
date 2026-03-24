@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Roboto, Lora } from 'next/font/google';
 import Script from 'next/script';
 import '../globals.css';
-import { Header, Footer, DictionaryProvider } from '@/components';
+import { Header, Footer, Providers } from '@/components';
 import { getDictionary, Locale } from '@/get-dictionary';
 
 const roboto = Roboto({
@@ -62,11 +62,11 @@ export default async function RootLayout({
         data-channelcode={process.env.NEXT_PUBLIC_CHANNELCODE ?? ''}
       >
         <Script src="//widget.siteminder.com/ibe.min.js" strategy="afterInteractive" />
-        <DictionaryProvider dictionary={dict}>
+        <Providers dictionary={dict}>
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
-        </DictionaryProvider>
+        </Providers>
       </body>
     </html>
   );
