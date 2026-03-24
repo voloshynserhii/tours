@@ -1,0 +1,487 @@
+{
+  "Metadata": {
+    "siteName": "tours",
+    "siteDescription": ""
+  },
+  "Navigation": {
+    "home": "Home",
+    "tours": "Tours",
+    "routes": "Routes",
+    "accomodation": "Accomodation",
+    "extras": "Extras",
+    "contact": "Contact",
+    "booking": "Book"
+  },
+  "Home": {
+    "heroTitle": "Welcome to ",
+    "heroSubtitle": "A peaceful retreat in the heart of the countryside",
+    "introTitle": "",
+    "introText": "A beautifully restored 19th-century farmhouse, thoughtfully converted into a 4★ boutique countryside hotel set among pine trees at the foot of the mountains.",
+    "introParagraph": "The original character of the property has been carefully preserved, with traditional architecture and rural details complemented by modern comforts and contemporary design. The result is a calm, welcoming retreat that feels both authentic and refined.\n\nGuests can enjoy La Ruta, our on-site restaurant, offering relaxed dining in a warm and social setting. Outside, the property opens onto well-maintained gardens, outdoor seating areas, and a swimming pool, providing space to unwind, socialise, or simply enjoy the peaceful surroundings.\n\nWith on-site parking, generous communal areas, and a setting that invites both rest and exploration, The Pines Hotel is an ideal base for guests looking to experience the Spanish countryside in comfort and style.",
+    "amenities": "Amenities",
+    "amenityRestaurant": "On-site Restaurant",
+    "amenityPool": "Swimming Pool",
+    "amenityGardens": "Lush Gardens",
+    "amenityParking": "Free Parking",
+    "exploreRooms": "Explore Our Rooms",
+    "bookNow": "Book Your Stay",
+    "roomTypes": {
+      "double": "Double Room",
+      "suite": "Suite",
+      "family": "Family Room"
+    }
+  },
+  "Rooms": {
+    "title": "Our Rooms",
+    "subtitle": "Carefully designed spaces combining comfort and elegance",
+    "introText": "Each of our rooms has been thoughtfully designed to offer a perfect blend of comfort and style. Whether you're looking for a romantic getaway or a peaceful retreat, our rooms provide the ideal setting for your stay.",
+    "introParagraph": "All our rooms feature premium bedding, modern en-suite bathrooms, free Wi-Fi, and views of the surrounding countryside. Each room has been thoughtfully designed to provide comfort while preserving the authentic character of our historic property.",
+    "doubleRoom": "Double Room",
+    "suite": "Suite",
+    "familyRoom": "Family Room",
+    "features": "Features",
+    "gallery": "Gallery",
+    "bookRoom": "Book This Room",
+    "checkAvailability": "Check Availability",
+    "showMore": "Show More",
+    "moreInfo": "More Info",
+    "startingFrom": "starting from",
+    "roomFeatures": "Room Features",
+    "includedInAllRoomsTitle": "Included in All Rooms",
+    "allRoomsAmenities": [
+      "Free Wifi",
+      "Air Conditioning",
+      "Television",
+      "Garden view",
+      "Room Safe",
+      "Bathroom Toiletries",
+      "Towels",
+      "Wardrobe"
+    ],
+    "roomSize": "Room Size",
+    "guest": "guest",
+    "guests": "guests",
+    "otherRoomTypes": "Other Room Types",
+    "data": {
+      "benicarlo": {
+        "name": "Benicarlo",
+        "type": "Standard Double Room",
+        "shortDescription": "Our Double Rooms offer a calm and comfortable retreat, blending traditional countryside charm with modern design details.",
+        "longDescription": "Our Double Rooms offer a calm and comfortable retreat, blending traditional countryside charm with modern design details.\n\nEach room features warm, natural tones, soft lighting, and carefully chosen furnishings that reflect the rural setting of The Pines Hotel. Original features sit comfortably alongside contemporary comforts, creating a relaxed and welcoming space to unwind."
+      },
+      "traiguera": {
+        "name": "Traiguera",
+        "type": "Standard Double Room",
+        "shortDescription": "Our Double Rooms offer a calm and comfortable retreat, blending traditional countryside charm with modern design details.",
+        "longDescription": "Our Double Rooms offer a calm and comfortable retreat, blending traditional countryside charm with modern design details.\n\nEach room features warm, natural tones, soft lighting, and carefully chosen furnishings that reflect the rural setting of The Pines Hotel. Original features sit comfortably alongside contemporary comforts, creating a relaxed and welcoming space to unwind."
+      },
+      "la-mina": {
+        "name": "La Mina",
+        "type": "Standard Double Room",
+        "shortDescription": "Our Double Rooms offer an authentic countryside retreat, full of rustic charm and traditional character.",
+        "longDescription": "Our Double Rooms offer an authentic countryside retreat, full of rustic charm and traditional character.\n\nExposed wooden ceiling beams, terracotta tiled floors, and thick whitewashed walls create a warm and inviting atmosphere that reflects the heritage of the surrounding landscape. Rich natural textures and handcrafted details blend effortlessly with subtle modern comforts, offering a space that feels both timeless and comfortable.\n\nThe room features a welcoming double bed dressed in quality linens, soft ambient lighting, and carefully chosen furnishings that complement the rural setting. The en-suite bathroom continues the traditional feel, with classic tiling, character features, and a walk-in shower or bath tub."
+      },
+      "almenara": {
+        "name": "Almenara",
+        "type": "Superior Double/Twin Room",
+        "shortDescription": "Our Superior Double / Twin Rooms offer an enhanced sense of space and comfort, blending traditional countryside charm with refined modern design details.",
+        "longDescription": "Our Superior Double / Twin Rooms offer an enhanced sense of space and comfort, blending traditional countryside charm with refined modern design details.\n\nGenerously sized and thoughtfully designed, these rooms feature warm, natural tones, soft ambient lighting, and carefully selected furnishings that reflect the rural setting of The Pines Hotel. Original architectural features sit seamlessly alongside contemporary comforts, creating an elegant yet relaxed space to truly unwind.\n\nThe larger layout includes an expanded bathroom and the choice of a spacious king-size/twin bed, making it ideal for couples, friends, or solo travellers seeking extra room to relax."
+      },
+      "carlet": {
+        "name": "Carlet",
+        "type": "Superior Double/Twin Room",
+        "shortDescription": "Our Superior Double / Twin Rooms offer an enhanced sense of space and comfort, blending traditional countryside charm with refined modern design details.",
+        "longDescription": "Our Superior Double / Twin Rooms offer an enhanced sense of space and comfort, blending traditional countryside charm with refined modern design details.\n\nGenerously sized and thoughtfully designed, these rooms feature warm, natural tones, soft ambient lighting, and carefully selected furnishings that reflect the rural setting of The Pines Hotel. Original architectural features sit seamlessly alongside contemporary comforts, creating an elegant yet relaxed space to truly unwind.\n\nThe larger layout includes an expanded bathroom and the choice of a spacious king-size/twin bed, making it ideal for couples, friends, or solo travellers seeking extra room to relax."
+      },
+      "the-red-sand-suite": {
+        "name": "The Red Sand Suite",
+        "type": "Suite",
+        "shortDescription": "Our Suites provide extra space and comfort, designed for guests who appreciate a little more room to relax.",
+        "longDescription": "Our Suites provide extra space and comfort, designed for guests who appreciate a little more room to relax.\n\nFeaturing distinct sleeping and living areas, the Suites combine elegant, modern styling with traditional architectural details. Natural textures, warm colours, and soft furnishings create a refined yet relaxed atmosphere — perfect for longer stays or guests seeking added comfort."
+      },
+      "cdg-retreat": {
+        "name": "CDG Retreat",
+        "type": "Family Room",
+        "shortDescription": "Our Family Room offers a spacious and private layout, thoughtfully designed for families who want to stay together while enjoying a little extra separation.",
+        "longDescription": "Our Family Room offers a spacious and private layout, thoughtfully designed for families who want to stay together while enjoying a little extra separation.\n\nThe room is arranged as one private unit, split into two distinct sleeping areas, providing comfort and privacy for parents and children within the same space. Traditional countryside features are paired with chic design elements, warm lighting, and modern comforts to create a relaxed and welcoming atmosphere."
+      }
+    }
+  },
+  "roomPage": {
+    "characteristics": "Characteristics",
+    "amenities": "Amenities",
+    "hotelServices": "The Pine Hotel's services"
+  },
+  "Amenities": {
+    "benicarlo": {
+      "2guests": "2 guests",
+      "28m": "28 m²",
+      "doubleBed": "Comfortable double bed with quality linens",
+      "shower": "Walk-in shower",
+      "airConditioning": "Air conditioning and heating",
+      "tv": "Flat-screen TV",
+      "wifi": "Free Wi-Fi",
+      "pool": "Private Pool",
+      "restaurant": "Restaurant",
+      "thoughtfulLighting": "Thoughtful lighting and comfortable seating",
+      "chicDesign": "Chic design with a traditional countryside feel",
+      "panoramicView": "Countryside views",
+      "workspace": "Workspace",
+      "kettle": "Coffee & tea facilities",
+      "luxuryToiletries": "Luxury toiletries"
+    },
+    "traiguera": {
+      "2guests": "2 guests",
+      "35m": "35 m²",
+      "doubleBed": "Comfortable double bed with quality linens",
+      "panoramicView": "Countryside views",
+      "wifi": "Free Wi-Fi",
+      "pool": "Private Pool",
+      "restaurant": "Restaurant",
+      "airConditioning": "Air conditioning and heating",
+      "tv": "Flat-screen TV",
+      "shower": "Walk-in shower",
+      "kettle": "Coffee & tea facilities",
+      "thoughtfulLighting": "Thoughtful lighting and comfortable seating",
+      "chicDesign": "Chic design with a traditional countryside feel",
+      "workspace": "Workspace",
+      "luxuryToiletries": "Luxury toiletries"
+    },
+    "la-mina": {
+      "2guests": "2 guests",
+      "45m": "45 m²",
+      "doubleBed": "Comfortable double bed with quality linens",
+      "panoramicView": "Garden and mountain views",
+      "wifi": "Free Wi-Fi",
+      "pool": "Private Pool",
+      "restaurant": "Restaurant",
+      "airConditioning": "Air conditioning and heating",
+      "tv": "Flat-screen TV",
+      "jakuzzi": "Shower with bathtub",
+      "kettle": "Coffee & tea facilities",
+      "softLighting": "Soft lighting and practical seating",
+      "traditionalDesign": "Traditional design with authentic rural character",
+      "premiumWorkspace": "Premium workspace",
+      "minibar": "Minibar",
+      "luxuryToiletries": "Luxury toiletries",
+      "bluetoothSpeaker": "Bluetooth speaker"
+    },
+    "almenara": {
+      "2guests": "2 guests",
+      "28m": "28 m²",
+      "doubleBed": "Spacious king-size/twin bed option with quality linens",
+      "panoramicView": "Countryside views",
+      "wifi": "Free Wi-Fi",
+      "pool": "Private Pool",
+      "restaurant": "Restaurant",
+      "airConditioning": "Air conditioning and heating",
+      "tv": "Flat-screen TV",
+      "shower": "Large en-suite bathroom with walk-in shower",
+      "kettle": "Coffee & tea facilities",
+      "thoughtfulLighting": "Thoughtful lighting and comfortable seating",
+      "chicDesign": "Chic design with a traditional countryside feel",
+      "workspace": "Workspace",
+      "luxuryToiletries": "Luxury toiletries"
+    },
+    "carlet": {
+      "2guests": "2 guests",
+      "35m": "35 m²",
+      "doubleBed": "Spacious king-size/twin bed option with quality linens",
+      "panoramicView": "Countryside views",
+      "wifi": "Free Wi-Fi",
+      "pool": "Private Pool",
+      "restaurant": "Restaurant",
+      "airConditioning": "Air conditioning and heating",
+      "tv": "Flat-screen TV",
+      "shower": "Large en-suite bathroom with walk-in shower",
+      "kettle": "Coffee & tea facilities",
+      "thoughtfulLighting": "Thoughtful lighting and comfortable seating",
+      "chicDesign": "Chic design with a traditional countryside feel",
+      "workspace": "Workspace",
+      "luxuryToiletries": "Luxury toiletries"
+    },
+    "the-red-sand-suite": {
+      "2guests": "2 guests",
+      "50m": "50 m²",
+      "kingSizeBed": "Queen-size bed with premium bedding",
+      "sofa": "Separate living area with sofa seating",
+      "wifi": "High-speed Wi-Fi",
+      "pool": "Private Pool",
+      "restaurant": "Restaurant",
+      "airConditioning": "Air conditioning and heating",
+      "tv": "Flat-screen TV",
+      "jakuzzi": "Jacuzzi bubble bath tub",
+      "kettle": "Coffee & tea facilities",
+      "minibar": "Minibar",
+      "stylishDecor": "Stylish décor inspired by the surrounding countryside",
+      "countrysideViews": "Countryside views",
+      "workspace": "Workspace",
+      "luxuryToiletries": "Luxury toiletries"
+    },
+    "cdg-retreat": {
+      "4guests": "4 guests",
+      "60m": "60 m²",
+      "3beds": "Comfortable sleeping arrangements for families",
+      "sofa": "Generous storage and seating space",
+      "wifi": "High-speed Wi-Fi",
+      "pool": "Private Pool",
+      "restaurant": "Restaurant",
+      "airConditioning": "Air conditioning and heating",
+      "tv": "Flat-screen TV",
+      "shower": "En-suite bathroom with shower and bath tub",
+      "kettle": "Coffee & tea facilities",
+      "kitchenette": "Kitchenette",
+      "traditionalRuralCharacter": "Traditional rural character with modern amenities",
+      "gardenViews": "Garden views",
+      "roofTerrace": "Private roof terrace with mountain views",
+      "luxuryToiletries": "Luxury toiletries"
+    }
+  },
+  "Dine": {
+    "title": "La Ruta Restaurant",
+    "subtitle": "Relaxed dining in a warm and social atmosphere",
+    "description": "La Ruta is a countryside restaurant where fire, flavor, and landscape come together. Nestled in the Spanish mountains, it offers a warm rural atmosphere with both cozy indoor dining and open-air seating in a garden overlooking sweeping mountain views.",
+    "welcome": "Welcome to La Ruta",
+    "welcomeDescription": "The cuisine celebrates traditional BBQ: slow-grilled meats, smoky aromas from the fire, and rustic recipes. Paired with a selection of wines and beers, La Ruta invites guests to slow down, share a table, and enjoy honest food in a beautiful natural setting.",
+    "localCuisineTitle": "Rural Cuisine",
+    "localCuisineDescription": "Fresh, seasonal dishes made with locally grown, laid, and responsibly sourced ingredients from nearby farms and producers.",
+    "bbqTitle": "Authentic Wood-fired BBQ",
+    "bbqDescription": "At La Ruta, the grill is the heart of the kitchen. Offering premium meats and ingredients, creating rich smoky flavours and a true countryside BBQ experience.",
+    "terraceTitle": "Garden Terrace",
+    "terraceDescription": "Dine outdoors in our garden surrounded by nature, where panoramic mountain views and the beauty of the countryside elevate every meal.",
+    "openingHours": "Opening Hours",
+    "schedule": [
+      {
+        "day": "Monday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "20:00 - 23:00"
+      },
+      {
+        "day": "Thursday",
+        "hours": "20:00 - 23:00"
+      },
+      {
+        "day": "Friday",
+        "hours": "20:00 - 23:00"
+      },
+      {
+        "day": "Saturday",
+        "hours": "13:00 - 17:00 / 20:00 - 23:00"
+      },
+      {
+        "day": "Sunday",
+        "hours": "13:00 - 17:00 / 20:00 - 23:00"
+      }
+    ],
+    "makeReservation": "Make a Reservation",
+    "reservationInfo": "For reservations and special dietary requirements, please contact us",
+    "reserveTable": "Reserve a Table"
+  },
+  "Experiences": {
+    "title": "Personalised Experiences",
+    "text": "Our boutique hotel in Culla is available for exclusive private hire, giving your group complete privacy and a fully bespoke experience in the heart of Castellón, a region renowned for world-class cycling and outdoor sport.",
+    "paragraph": "From riding iconic roads featured in La Vuelta a España and tackling legendary routes around the Río Mijares (Millars), to experiencing events such as Mediterranean Epic and UCI Gravel World Series qualifiers held in the province, alongside championship golf at Club de Campo del Mediterráneo, home of Sergio García, plus guided tours, gastronomy, and tailored adventures, every detail is curated to match your group’s ambition, pace, and style for an unforgettable Mediterranean escape.",
+    "reservationInfo": "Contact us directly via the WhatsApp button to start planning your personalised experience.",
+    "reserveExperience": "Plan Your Experience",
+    "experiences": [
+      {
+        "id": "walks",
+        "name": "Nature Walks",
+        "description": "Enjoy beautiful countryside walks through the surrounding pine forests and mountains, with paths starting directly from the hotel. Experience the peaceful natural beauty at your own pace."
+      },
+      {
+        "id": "cycling",
+        "name": "Countryside Cycling",
+        "description": "Explore the breathtaking roads and mountain climbs of Castellón on a fully supported cycling adventure, perfectly suited for road cycling, gravel riding, and mountain biking, with custom route planning and guided tours arranged to match your pace and style."
+      },
+      {
+        "id": "relaxation",
+        "name": "Wellness & Relaxation",
+        "description": "Take advantage of the pool and garden facilities, if it’s yoga sessions, or poolside relaxation , our peaceful garden areas are designed for rejuvenation and mindfulness."
+      },
+      {
+        "id": "golf",
+        "name": "Golf",
+        "description": "Discover the stunning fairways of Castellón with a premium golf excursion that combines championship courses, Mediterranean views, seamless transport, and exclusive access to the renowned Club de Campo del Mediterráneo, home course of Sergio García, for an unforgettable day on Spain’s Costa del Azahar."
+      },
+      {
+        "id": "local",
+        "name": "Local",
+        "description": "Discover the charm of Culla on a curated day tour through its medieval streets, panoramic mountain viewpoints, and local gastronomy, featuring iconic landmarks such as the Castillo de Culla for an authentic taste of inland Castellón."
+      },
+      {
+        "id": "personalised",
+        "name": "Personalised experiences",
+        "description": "Our boutique hotel in Culla is available for exclusive private hire, giving your group complete privacy and a fully bespoke experience in the heart of Castellón, a region renowned for world-class cycling and outdoor sport. From riding iconic roads featured in La Vuelta a España and tackling legendary routes around the Río Mijares (Millars), to experiencing events such as Mediterranean Epic and UCI Gravel World Series qualifiers held in the province, alongside championship golf at Club de Campo del Mediterráneo, home of Sergio García, plus guided tours, gastronomy, and tailored adventures, every detail is curated to match your group’s ambition, pace, and style for an unforgettable Mediterranean escape. Contact us directly via the WhatsApp button to start planning your personalised experience."
+      }
+    ]
+  },
+  "Extras": {
+    "title": "Extras & Services",
+    "subtitle": "Enhance your stay with our additional services",
+    "spa": "Spa Services",
+    "transfers": "Airport Transfers",
+    "events": "Private Events",
+    "cycling": "Guided Cycling Tours",
+    "description": "Add-on services to personalize your experience at ."
+  },
+  "Contact": {
+    "title": "Get in Touch",
+    "subtitle": "We'd love to hear from you",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "contactForm": "Contact Form",
+    "followUs": "Follow Us",
+    "hoursTitle": "Opening Hours",
+    "location": "The Pines Hotel, Ctra Els Ivarsos a Culla KM1, Castellon, Valencia, Spain",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your@email.com",
+    "phoneLabel": "Phone",
+    "phonePlaceholder": "+34 123 456 789",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "How can we help?",
+    "messagePlaceholder": "Your message...",
+    "thankYouMessage": "Thank you for your message. We'll be in touch soon!",
+    "mondayFriday": "Monday - Friday:",
+    "mondayFridayHours": "9:00 AM - 6:00 PM",
+    "saturday": "Saturday:",
+    "saturdayHours": "10:00 AM - 4:00 PM",
+    "sunday": "Sunday:",
+    "sundayStatus": "Closed",
+    "ourLocation": "Our Location",
+    "mapPlaceholder": "Google Maps Embed - Placeholder"
+  },
+  "BookingBar": {
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "guests": "Guests",
+    "adults": "Adults:",
+    "kids": "Kids:",
+    "rooms": "Rooms",
+    "checkAvailability": "CHECK AVAILABILITY"
+  },
+  "GuestSelector": {
+    "adults": "Adults",
+    "kids": "Kids",
+    "ageOfChildren": "Age of children",
+    "child": "Child",
+    "rooms": "Rooms",
+    "done": "DONE"
+  },
+  "DateSelector": {
+    "sun": "Sun",
+    "mon": "Mon",
+    "tue": "Tue",
+    "wed": "Wed",
+    "thu": "Thu",
+    "fri": "Fri",
+    "sat": "Sat",
+    "done": "DONE"
+  },
+  "Terms": {
+    "title": "Terms & Conditions",
+    "subtitle": "Please read our terms and conditions carefully",
+    "heading": "Terms and Conditions",
+    "welcome": "Welcome to . Please read our terms and conditions carefully before making a reservation. By making a reservation, you agree to be bound by these terms and conditions.",
+    "reservationsTitle": "1. Reservations",
+    "reservationsList": [
+      "All reservations are subject to availability.",
+      "Reservations can be made online through our website, by phone, or by email.",
+      "A valid credit card is required to guarantee your reservation.",
+      "Special requests are subject to availability and may incur additional charges."
+    ],
+    "checkInTitle": "2. Check-in and Check-out",
+    "checkInList": [
+      "Check-in time is from 3:00 PM on the day of arrival.",
+      "Check-out time is by 12:00 PM on the day of departure.",
+      "Early check-in and late check-out are subject to availability and may incur additional charges.",
+      "Guests are required to present a valid photo ID and the credit card used for the reservation upon check-in."
+    ],
+    "cancellationTitle": "3. Cancellation Policy",
+    "cancellationList": [
+      "Cancellations made more than 7 days prior to the arrival date will receive a full refund.",
+      "Cancellations made within 7 days of the arrival date will be charged for the first night of the stay.",
+      "No-shows will be charged for the entire reservation.",
+      "For group reservations, a different cancellation policy may apply. Please contact us for more information."
+    ],
+    "paymentTitle": "4. Payment",
+    "paymentList": [
+      "We accept major credit cards (Visa, MasterCard, American Express) and cash.",
+      "Full payment is required upon check-in.",
+      "All prices are in Euros (€) and include applicable taxes."
+    ],
+    "behaviorTitle": "5. Guest Behavior",
+    "behaviorList": [
+      "Guests are expected to behave in a respectful and responsible manner at all times.",
+      "Smoking is not permitted in any indoor areas of the hotel. A cleaning fee will be charged for smoking in the rooms.",
+      "Pets are not allowed, with the exception of service animals.",
+      "Any damage to hotel property will be charged to the guest's credit card."
+    ],
+    "liabilityTitle": "6. Liability",
+    "liabilityList": [
+      "The Pines Hotel is not responsible for any lost, stolen, or damaged personal belongings.",
+      "The hotel is not liable for any accidents or injuries that occur on the premises.",
+      "Guests are responsible for their own safety and security."
+    ],
+    "privacyTitle": "7. Privacy Policy",
+    "privacyText": "We are committed to protecting your privacy. Please review our Privacy Policy for more information on how we collect, use, and protect your personal data.",
+    "contactTitle": "8. Contact Information",
+    "contactText": "If you have any questions or concerns, please do not hesitate to contact us:",
+    "address": "Address:",
+    "addressDetails": "The Pines Hotel, Ctra Els Ivarsos a Culla KM1, Castellon, Valencia, Spain",
+    "phone": "Phone:",
+    "email": "Email:"
+  },
+  "Cookies": {
+    "title": "Cookies Policy",
+    "subtitle": "How we use cookies",
+    "heading": "Cookie Policy",
+    "welcome": "Welcome to . This Cookie Policy explains how we use cookies and similar technologies on our website.",
+    "whatAreCookiesTitle": "What are cookies?",
+    "whatAreCookiesText": "Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work, or work more efficiently, as well as to provide information to the owners of the site.",
+    "howWeUseCookiesTitle": "How we use cookies",
+    "howWeUseCookiesText": "We use a minimal number of cookies on our website. We do not use cookies to collect personal information or to track your browsing habits. The cookies we use are for essential functionallity only.",
+    "essentialCookiesTitle": "Essential Cookies:",
+    "essentialCookiesText": "These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information.",
+    "thirdPartyCookiesTitle": "Third-party cookies",
+    "thirdPartyCookiesText": "We do not use any third-party cookies for advertising or tracking purposes.",
+    "yourChoicesTitle": "Your choices",
+    "yourChoicesText": "Because we only use essential cookies, there is no mechanism for you to opt-out of them, other than to cease using the website, or to configure your browser to block cookies. However, as stated above, this may affect the functionality of the website.",
+    "contactTitle": "Contact Us",
+    "contactText": "If you have any questions about our use of cookies, please contact us at:",
+    "email": "Email:"
+  },
+  "Footer": {
+    "copyright": "tours. All rights reserved.",
+    "developedBy": "Website developed by",
+    "cookies": "Cookies Policy",
+    "terms": "Terms & Conditions",
+    "followUs": "Follow Us",
+    "quickLinks": "Quick Links"
+  },
+  "Common": {
+    "description": "Description",
+    "price": "Price",
+    "capacity": "Capacity",
+    "area": "Area",
+    "amenities": "Amenities",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close"
+  }
+}
