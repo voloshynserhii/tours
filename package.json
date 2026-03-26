@@ -1,7 +1,7 @@
 {
-  "name": "tours",
+  "name": "Castellon Cycling Co",
   "version": "1.0.0",
-  "description": "tours",
+  "description": "Castellon Cycling Co",
   "private": true,
   "scripts": {
     "dev": "next dev --webpack",

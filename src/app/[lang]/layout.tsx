@@ -18,7 +18,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: 'tours',
+  title: 'Castellon Cycling Co',
   description:
     '',
   icons: {

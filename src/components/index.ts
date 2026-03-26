@@ -10,3 +10,7 @@ export { Slider } from './Slider';
 export type { Slide } from './Slider';
 export { default as Icon } from './Icon';
 export * from './Maintenance';
+export { ContentBlock } from './ContentBlock'
+export { BorderedButton } from './BorderedButton'
+export { DynamicBorder } from './DynamicBorder'
+export { FeaturesList } from './FeaturesList'

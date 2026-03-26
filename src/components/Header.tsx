@@ -36,7 +36,7 @@ export function Header() {
           href={`/${lang}`}
           className="text-white text-xl tracking-wide -translate-y-[-70px]"
         >
-          <Image src="/pineslogo.png" alt="tours" width={200} height={200} className='w-[250px] h-[250px]' />
+          <Image src="/pineslogo.png" alt="Castellon Cycling Co" width={200} height={200} className='w-[250px] h-[250px]' />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">

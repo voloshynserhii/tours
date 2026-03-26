@@ -24,7 +24,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-section mb-section">
           {/* Brand */}
           <div>
-            <h3 className="text-xl font-serif font-bold mb-4">tours</h3>
+            <h3 className="text-xl font-serif font-bold mb-4">Castellon Cycling Co</h3>
             <p className="text-cream-200 text-sm">{contact.location}</p>
           </div>
 
