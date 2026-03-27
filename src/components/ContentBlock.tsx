@@ -5,12 +5,9 @@ type Orientation = 'left' | 'right';
 interface ContentBlockProps {
   orientation: Orientation;
   title: string;
-  events: {
-    name: string;
-    date?: string;
-  }[];
-  buttonText: string;
-  link: string;
+  events: string[];
+  buttonText?: string;
+  link?: string;
   features?: {
     title: string;
     features: string[];
@@ -37,14 +34,13 @@ export const ContentBlock: React.FC<ContentBlockProps> = ({
         {events.map((event, index) => (
           <BorderedButton
             key={index}
-            text={event.date ? `${event.name} /// ${event.date}` : event.name}
-            link='/contact'
+            text={event}
           />
         ))}
       </div>
 
       <div className={`flex ${isLeftOriented ? 'justify-start' : 'justify-end'} mt-8`}>
-        <BorderedButton text={buttonText} link={link} />
+        <BorderedButton text={buttonText} showArrow link={link} />
       </div>
     </div>
   );

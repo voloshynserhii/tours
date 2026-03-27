@@ -1,22 +1,46 @@
+import Link from 'next/link';
 import React from 'react';
 
-interface BorderedButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+type BaseProps = {
   text: string;
   showArrow?: boolean;
-}
+  className?: string;
+};
 
-export const BorderedButton: React.FC<BorderedButtonProps> = ({ text, showArrow = true, ...props }) => {
+type DivAsButton = BaseProps & {
+  link?: undefined;
+} & React.HTMLAttributes<HTMLDivElement>;
+
+type ButtonAsLink = BaseProps & {
+  link: string;
+} & React.AnchorHTMLAttributes<HTMLAnchorElement>;
+
+type BorderedButtonProps = DivAsButton | ButtonAsLink;
+
+export const BorderedButton: React.FC<BorderedButtonProps> = ({ className, showArrow = false, text, ...props }) => {
+  const commonClassName = `group relative w-full border border-white py-2 px-4 flex items-center justify-center text-center transition-all duration-300 ${showArrow ? 'hover:bg-white' : ''} ${className || ''}`;
+
+  const content = (
+    <span className={`text-sm md:text-base tracking-[0.15em] uppercase transition-colors duration-300 ${showArrow ? 'group-hover:text-black' : ''}`}>
+      {text}
+      {showArrow && (
+        <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">›</span>
+      )}
+    </span>
+  );
+
+  if (props.link) {
+    const { link, ...rest } = props as ButtonAsLink;
+    return (
+      <Link href={link} {...rest} className={commonClassName}>
+        {content}
+      </Link>
+    );
+  }
+
   return (
-    <button
-      className="group relative w-full border border-white py-2 px-4 flex items-center justify-center transition-all duration-300 hover:bg-white"
-      {...props}
-    >
-      <span className="text-sm md:text-base tracking-[0.15em] uppercase transition-colors duration-300 group-hover:text-black">
-        {text}
-        {showArrow && (
-          <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">›</span>
-        )}
-      </span>
-    </button>
+    <div {...props as DivAsButton} className={commonClassName}>
+      {content}
+    </div>
   );
 };

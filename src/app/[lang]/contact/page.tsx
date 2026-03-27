@@ -13,8 +13,7 @@ export default async function ContactPage({
 
   return (
     <>
-
-      <section className="py-section container mx-auto px-gutter">
+      <section className="py-section container mx-auto px-gutter my-40">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Contact Information */}
           <div className="lg:col-span-1 space-y-8">
@@ -51,27 +50,6 @@ export default async function ContactPage({
                 {CONTACT.email}
               </a>
             </div>
-
-            {/* Hours */}
-{/*             <div className="bg-cream-50 lg:p-6 rounded-lg">
-              <h3 className="font-serif font-bold text-lg mb-3 text-stone-900">
-                {t.hoursTitle}
-              </h3>
-              <div className="space-y-2 text-sm text-stone-700">
-                <div className="flex justify-between">
-                  <span>{t.mondayFriday}</span>
-                  <span>{t.mondayFridayHours}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>{t.saturday}</span>
-                  <span>{t.saturdayHours}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>{t.sunday}</span>
-                  <span>{t.sundayStatus}</span>
-                </div>
-              </div>
-            </div> */}
           </div>
 
           {/* Contact Form */}
