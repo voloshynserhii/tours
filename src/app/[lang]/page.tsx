@@ -39,7 +39,7 @@ export default async function Home({
             'Discover one of Spain’s last truly undiscovered cycling regions - right from your doorstep.',
           ]}
           buttonText='View Tours'
-          link='/contact'
+          link='/tours'
           features={{
             title: '',
             features: [
@@ -56,8 +56,6 @@ export default async function Home({
           events={[
             'Our location is key. Where most cycling trips begin with a transfer, busy traﬃc, or boring routes to the “good bit” - here we focus on qualitiy and less on crowds. Step outside the hotel and ride straight into the mountains.',
           ]}
-          buttonText='Discover our tours'
-          link='/tours'
           features={{
             title: "",
             features: [
@@ -76,8 +74,6 @@ export default async function Home({
             'Expect the same immaculate Spanish tarmac, epic climbs, and incredible views.',
             'But often with the road entirely to yourself. Uninterrupted riding from the very first kilometre.',
           ]}
-          buttonText='Ask us to support you'
-          link='/contact'
         />
       </ParallaxSection>
       <Slider slides={experienceSlides} />
@@ -89,8 +85,6 @@ export default async function Home({
           events={[
             'Every detail is designed to maximise your time on the bike.',
           ]}
-          buttonText='Ask us to support you'
-          link='/contact'
           features={{
             title: '',
             features: [
@@ -102,6 +96,7 @@ export default async function Home({
       </ParallaxSection>
 
       <AboutUs />
+
       <FinalCta />
     </div>
   );

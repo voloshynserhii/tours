@@ -7,7 +7,7 @@ export function FinalCta() {
       <p className="mb-8">
         Get in touch to plan your trip or find the right experience for you.
       </p>
-      <Button link="/contact" >Enquire Now</Button>
+      <Button>Enquire Now</Button>
     </div>
   );
 }

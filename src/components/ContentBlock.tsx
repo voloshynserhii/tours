@@ -39,9 +39,11 @@ export const ContentBlock: React.FC<ContentBlockProps> = ({
         ))}
       </div>
 
-      <div className={`flex ${isLeftOriented ? 'justify-start' : 'justify-end'} mt-8`}>
+      {buttonText && (
+        <div className={`flex ${isLeftOriented ? 'justify-start' : 'justify-end'} mt-8`}>
         <BorderedButton text={buttonText} showArrow link={link} />
       </div>
+      )}
     </div>
   );
 
