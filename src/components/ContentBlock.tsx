@@ -53,13 +53,13 @@ export const ContentBlock: React.FC<ContentBlockProps> = ({
       {isLeftOriented ? (
         <>
           <div className="flex w-full">
-            <div className="w-1/2 ">{content}</div>
+            <div className="md:w-1/2 ">{content}</div>
           </div>
         </>
       ) : (
         <>
           <div className="flex w-full justify-end">
-            <div className="w-1/2">{content}</div>
+            <div className="md:w-1/2">{content}</div>
           </div>
         </>
       )}
