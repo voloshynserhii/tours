@@ -1,6 +1,6 @@
 export const AboutUs = () => {
     return (
-        <section className=" max-w-7xl mx-auto py-20 px-10 grid grid-cols-1 md:grid-cols-2 gap-10 bg-white items-center">
+        <section className=" max-w-7xl mx-auto py-20 px-10 grid grid-cols-1 md:grid-cols-2 gap-10 bg-transparent items-center">
             <div className="">
                 <h2 className="text-2xl font-bold mb-6 underline decoration-1 underline-offset-8 uppercase">About Us</h2>
                 <p className="text-gray-700 leading-relaxed mb-4">

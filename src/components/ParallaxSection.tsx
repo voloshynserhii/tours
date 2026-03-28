@@ -5,11 +5,12 @@ import { useParallax } from 'react-scroll-parallax';
 interface Props {
   imageUrl: string;
   children: React.ReactNode;
-  className?: string
+  className?: string;
+  useFade?: boolean;
 }
 
-export const ParallaxSection = ({ imageUrl, children, className = "" }: Props) => {
-  const parallax = useParallax({
+export const ParallaxSection = ({ imageUrl, children, className = "", useFade = true }: Props) => {
+  const parallax = useParallax<HTMLDivElement>({
     speed: -50,
   });
 
@@ -24,7 +25,7 @@ export const ParallaxSection = ({ imageUrl, children, className = "" }: Props) =
           alt="Parallax background" 
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/40"></div>
+        {useFade && <div className="absolute inset-0 bg-black/40"></div>}
       </div>
       
       <div className="relative z-10 flex items-center justify-center min-h-screen">

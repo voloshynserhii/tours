@@ -37,15 +37,16 @@ export default async function Home({
           events={[
             'Quiet roads. No traﬃc. No transfers.',
             'Discover one of Spain’s last truly undiscovered cycling regions - right from your doorstep.',
+            'Located at the foot of the Maestrat mountains, Castellón Cycling Co. gives you direct access to smooth Spanish tarmac, epic climbs, and quiet roads. Ride without the crowds or logistics of traditional cycling destinations.'
           ]}
           buttonText='View Tours'
           link='/tours'
-          features={{
-            title: '',
-            features: [
-              'Located at the foot of the Maestrat mountains, Castellón Cycling Co. gives you direct access to smooth Spanish tarmac, epic climbs, and quiet roads. Ride without the crowds or logistics of traditional cycling destinations.',
-            ],
-          }}
+        /*           features={{
+                    title: '',
+                    features: [
+                      'Located at the foot of the Maestrat mountains, Castellón Cycling Co. gives you direct access to smooth Spanish tarmac, epic climbs, and quiet roads. Ride without the crowds or logistics of traditional cycling destinations.',
+                    ],
+                  }} */
         />
       </ParallaxSection>
 
@@ -54,14 +55,16 @@ export default async function Home({
           orientation='right'
           title='Start Where The Real Route Begins'
           events={[
-            'Our location is key. Where most cycling trips begin with a transfer, busy traﬃc, or boring routes to the “good bit” - here we focus on qualitiy and less on crowds. Step outside the hotel and ride straight into the mountains.',
+            'Our location is key. Where most cycling trips begin with a transfer, busy traﬃc, or boring routes to the “good bit” - here we focus on qualitiy and less on crowds.',
+            'Step outside the hotel and ride straight into the mountains.',
+            'No vans, no busy approach roads, no wasted time.',
           ]}
-          features={{
-            title: "",
-            features: [
-              'Our location is key. Where most cycling trips begin with a transfer, busy traﬃc, or boring routes to the “good bit” - here we focus on qualitiy and less on crowds. Step outside the hotel and ride straight into the mountains. No vans, no busy approach roads, no wasted time.',
-            ],
-          }}
+        /*           features={{
+                    title: "",
+                    features: [
+                      'Our location is key. Where most cycling trips begin with a transfer, busy traﬃc, or boring routes to the “good bit” - here we focus on qualitiy and less on crowds. Step outside the hotel and ride straight into the mountains. No vans, no busy approach roads, no wasted time.',
+                    ],
+                  }} */
         />
       </ParallaxSection>
 
@@ -76,6 +79,7 @@ export default async function Home({
           ]}
         />
       </ParallaxSection>
+
       <Slider slides={experienceSlides} />
 
       <ParallaxSection imageUrl="https://images.unsplash.com/photo-1474224017046-182ece80b263?q=80&w=2070">
@@ -84,20 +88,27 @@ export default async function Home({
           title='Ride More. Waste Less.'
           events={[
             'Every detail is designed to maximise your time on the bike.',
+            'More riding, fewer interruptions, and a setting that lets you fully switch oﬀ when the day is done.',
+            'This is cycling, stripped back to what matters.'
           ]}
-          features={{
-            title: '',
-            features: [
-              'More riding, fewer interruptions, and a setting that lets you fully switch oﬀ when the day is done.',
-              'This is cycling, stripped back to what matters.'
-            ],
-          }}
+        /*           features={{
+                    title: '',
+                    features: [
+                      'More riding, fewer interruptions, and a setting that lets you fully switch oﬀ when the day is done.',
+                      'This is cycling, stripped back to what matters.'
+                    ],
+                  }} */
         />
       </ParallaxSection>
 
-      <AboutUs />
+      <ParallaxSection useFade={false} imageUrl="https://media.istockphoto.com/id/1430878163/es/vector/textura-negra-angustiada.jpg?s=2048x2048&w=is&k=20&c=Dn2p0Tee2L2B8QXFW8kfviC0mjFIhJEzYy9sTA5tAlE=">
+        <div>
+          <AboutUs />
 
-      <FinalCta />
+          <FinalCta />
+        </div>
+
+      </ParallaxSection>
     </div>
   );
 }
