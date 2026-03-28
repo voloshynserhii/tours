@@ -26,7 +26,7 @@ export default async function Home({
     <div>
       <ParallaxSection imageUrl="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070">
         <div className="text-center text-white font-light tracking-widest uppercase">
-          <h2 className="text-sm mb-4 border-b border-white/30 inline-block pb-2">Castellon Cycling Co</h2>
+          <h1 className="text-sm mb-4 border-b border-white/30 inline-block pb-2">Castellon Cycling Co</h1>
         </div>
       </ParallaxSection>
 
@@ -35,18 +35,12 @@ export default async function Home({
           orientation='left'
           title='Just Ride. Epic routes from the first kilometre'
           events={[
-            'Quiet roads. No traﬃc. No transfers.',
-            'Discover one of Spain’s last truly undiscovered cycling regions - right from your doorstep.',
-            'Located at the foot of the Maestrat mountains, Castellón Cycling Co. gives you direct access to smooth Spanish tarmac, epic climbs, and quiet roads. Ride without the crowds or logistics of traditional cycling destinations.'
+            { text: 'Quiet roads. No traﬃc. No transfers.' },
+            { text: 'Discover one of Spain’s last truly undiscovered cycling regions - right from your doorstep.' },
+            { text: 'Located at the foot of the Maestrat mountains, Castellón Cycling Co. gives you direct access to smooth Spanish tarmac, epic climbs, and quiet roads. Ride without the crowds or logistics of traditional cycling destinations.' }
           ]}
           buttonText='View Tours'
           link='/tours'
-        /*           features={{
-                    title: '',
-                    features: [
-                      'Located at the foot of the Maestrat mountains, Castellón Cycling Co. gives you direct access to smooth Spanish tarmac, epic climbs, and quiet roads. Ride without the crowds or logistics of traditional cycling destinations.',
-                    ],
-                  }} */
         />
       </ParallaxSection>
 
@@ -55,16 +49,10 @@ export default async function Home({
           orientation='right'
           title='Start Where The Real Route Begins'
           events={[
-            'Our location is key. Where most cycling trips begin with a transfer, busy traﬃc, or boring routes to the “good bit” - here we focus on qualitiy and less on crowds.',
-            'Step outside the hotel and ride straight into the mountains.',
-            'No vans, no busy approach roads, no wasted time.',
+            { text: 'Our location is key. Where most cycling trips begin with a transfer, busy traﬃc, or boring routes to the “good bit” - here we focus on qualitiy and less on crowds.' },
+            { text: 'Step outside the hotel and ride straight into the mountains.'},
+            { text: 'No vans, no busy approach roads, no wasted time.' },
           ]}
-        /*           features={{
-                    title: "",
-                    features: [
-                      'Our location is key. Where most cycling trips begin with a transfer, busy traﬃc, or boring routes to the “good bit” - here we focus on qualitiy and less on crowds. Step outside the hotel and ride straight into the mountains. No vans, no busy approach roads, no wasted time.',
-                    ],
-                  }} */
         />
       </ParallaxSection>
 
@@ -73,9 +61,9 @@ export default async function Home({
           orientation='left'
           title='No traﬃc. No pelotons. Just riding.'
           events={[
-            'While other cycling destinations are becoming increasingly busy, Castellón remains largely untouched.',
-            'Expect the same immaculate Spanish tarmac, epic climbs, and incredible views.',
-            'But often with the road entirely to yourself. Uninterrupted riding from the very first kilometre.',
+            { text: 'While other cycling destinations are becoming increasingly busy, Castellón remains largely untouched.' },
+            { text: 'Expect the same immaculate Spanish tarmac, epic climbs, and incredible views.' },
+            { text: 'But often with the road entirely to yourself. Uninterrupted riding from the very first kilometre.' },
           ]}
         />
       </ParallaxSection>
@@ -87,9 +75,9 @@ export default async function Home({
           orientation='left'
           title='Ride More. Waste Less.'
           events={[
-            'Every detail is designed to maximise your time on the bike.',
-            'More riding, fewer interruptions, and a setting that lets you fully switch oﬀ when the day is done.',
-            'This is cycling, stripped back to what matters.'
+            { text: 'Every detail is designed to maximise your time on the bike.' },
+            { text: 'More riding, fewer interruptions, and a setting that lets you fully switch oﬀ when the day is done.' },
+            { text: 'This is cycling, stripped back to what matters.' }
           ]}
         /*           features={{
                     title: '',

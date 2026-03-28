@@ -5,7 +5,10 @@ type Orientation = 'left' | 'right';
 interface ContentBlockProps {
   orientation: Orientation;
   title: string;
-  events: string[];
+  events?: {
+    text: string;
+    link?: string;
+  }[];
   buttonText?: string;
   link?: string;
   features?: {
@@ -31,10 +34,12 @@ export const ContentBlock: React.FC<ContentBlockProps> = ({
         borderPosition={isLeftOriented ? 'top-left' : 'bottom-right'}
       />
       <div className="flex flex-col gap-3 w-full">
-        {events.map((event, index) => (
+        {events?.map((event, index) => (
           <BorderedButton
             key={index}
-            text={event}
+            text={event.text}
+            link={event.link}
+            showArrow={!!event.link}
           />
         ))}
       </div>
