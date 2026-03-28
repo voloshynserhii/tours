@@ -10,7 +10,7 @@ interface Props {
 
 export const ParallaxSection = ({ imageUrl, children, className = "" }: Props) => {
   const parallax = useParallax({
-    speed: -60,
+    speed: -50,
   });
 
   return (

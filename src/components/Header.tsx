@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDictionary } from '@/context/DictionaryContext';
 
 export function Header() {
@@ -12,6 +12,19 @@ export function Header() {
   const pathname = usePathname();
   const lang = pathname.split('/')[1] || 'en';
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const navItems = [
     { label: navigation.tours, href: `/${lang}/tours` },
@@ -22,13 +35,12 @@ export function Header() {
 
   return (
     <header
-      className="
+      className={`
         fixed top-0 left-0 w-full z-[9999]
         h-[122px]
-        bg-gray-900
         transition-all duration-700
         text-sm uppercase tracking-wider
-      "
+        ${scrolled ? 'bg-black/60' : 'bg-gray-900'}`}
     >
       <div className="max-w-auto mx-auto h-full px-6 flex items-center justify-center relative">
         {/* Logo */}

@@ -28,10 +28,7 @@ export const DynamicBorder: React.FC<DynamicBorderProps> = ({ title, borderPosit
         className={`absolute inset-0 border-solid border-white ${solidBorderClasses[borderPosition]}`}
       />
       {/* Dashed border part */}
-      <div
-        className={`absolute inset-0 border-dashed border-white opacity-100 transition-all duration-300 group-hover:border-solid group-hover:opacity-100 cursor-pointer ${dashedBorderClasses[borderPosition]}`}
-        style={{ borderDasharray: '20 10' }}
-      />
+      <div className={`absolute inset-0 border-dashed border-white opacity-100 transition-all duration-300 group-hover:border-solid group-hover:opacity-100 cursor-pointer ${dashedBorderClasses[borderPosition]}`} />
     </div>
   );
 };
