@@ -37,19 +37,19 @@ export function Header() {
     <header
       className={`
         fixed top-0 left-0 w-full z-[9999]
-        h-[120px]
+        h-[90px] md:h-[120px]
         transition-all duration-700
         text-sm uppercase tracking-wider
         ${scrolled ? 'bg-black/60' : 'transparent'}`}
     >
-      <div className="max-w-auto mx-auto h-full px-20 flex items-center justify-start relative gap-20">
+      <div className="max-w-auto mx-auto h-full px-5 md:px-20 flex items-center justify-start relative gap-20">
         <Link
           href={`/${lang}`}
           className="text-white 
           text-xl 
           tracking-wide mr-10"
         >
-          <Image src="/images/logo2.svg" alt="Castellon Cycling Co" width={200} height={200} className='w-[150px] h-[150px]' />
+          <Image src="/images/logo2.svg" alt="Castellon Cycling Co" width={200} height={200} className='w-[100px] h-[100px] md:w-[150px] md:h-[150px]' />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -107,10 +107,10 @@ export function Header() {
             {/* Logo */}
             <Link
               href={`/${lang}`}
-              className="absolute top-6 left-6 text-white text-xl font-serif tracking-wide"
+              className="absolute top-0 left-5 text-white text-xl font-serif tracking-wide"
               onClick={() => setIsOpen(false)}
             >
-              <Image src="/images/logo.svg" alt="The Pines Hotel" width={100} height={40} />
+              <Image src="/images/logo2.svg" alt="The Pines Hotel" width={100} height={40} />
             </Link>
 
             {/* Navigation */}
