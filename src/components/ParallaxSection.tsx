@@ -15,20 +15,21 @@ export const ParallaxSection = ({ imageUrl, children, className = "", useFade = 
   });
 
   return (
-    <section className={`relative min-h-screen overflow-hidden ${className}`}>
-      <div 
+    <section className={`relative overflow-hidden ${className}`}>
+      <div
         ref={parallax.ref}
-        className="absolute inset-0 z-0 h-[120%] w-full"
+        className="absolute left-0 right-0 z-0"
+        style={{ top: '-50%', bottom: '-50%' }}
       >
-        <img 
-          src={imageUrl} 
-          alt="Parallax background" 
+        <img
+          src={imageUrl}
+          alt="Parallax background"
           className="w-full h-full object-cover object-center"
         />
-        {useFade && <div className="absolute inset-0 bg-black/40"></div>}
+        {useFade && <div className="absolute inset-0 bg-black/40" />}
       </div>
-      
-      <div className="relative z-10 flex items-center justify-center min-h-screen">
+
+      <div className="relative z-10 flex items-center justify-center py-12">
         {children}
       </div>
     </section>

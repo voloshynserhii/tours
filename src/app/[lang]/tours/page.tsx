@@ -12,22 +12,24 @@ export default async function Tours({
 
   return (
     <div>
-      <ParallaxSection imageUrl="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070">
-        <div className="text-center text-white uppercase absolute left-[50%] top-[50%] -translate-x-[50%]">
-          <h1 className="text-xl mb-4 border-b border-white/30 inline-block pb-2">Choose Your Experience</h1>
-          <h3 className="text-sm mb-4 border-b border-white/30 inline-block pb-2">Whether you’re here to explore, train, or take on an event — every ride starts
-            straight from the hotel front door.</h3>
+      <ParallaxSection imageUrl="https://images.unsplash.com/photo-1715223445441-0a1bae6c3616?q=80&w=2662&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <div className="text-center text-white uppercase min-h-[80vh] flex flex-col justify-center items-center">
+          <div className='flex flex-col'>
+            <h1 className="text-5xl md:text-8xl mb-14 inline-block pb-2 px-8">Choose Your Experience</h1>
+            <h3 className="text-lg mb-4 lg:border-b lg:border-white/30 inline-block pb-2 px-8">Whether you’re here to explore, train, or take on an event — every ride starts
+              straight from the hotel front door.</h3>
+          </div>
         </div>
       </ParallaxSection>
 
-      <div className="bg-white text-center py-[100px]">
-        <p className="text-lg">
+      <div className="bg-[url(/images/background.png)] bg-cover bg-center text-center py-[100px] px-10">
+        <p className="text-2xl font-bold">
           Quiet mountain roads, smooth tarmac, and endless routes - more time riding, less
           time getting there.
         </p>
       </div>
 
-      <ParallaxSection imageUrl="https://images.unsplash.com/photo-1474224017046-182ece80b263?q=80&w=2070">
+      <ParallaxSection imageUrl="https://plus.unsplash.com/premium_photo-1726761725215-cca50b7d6ec7?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
         <ContentBlock
           orientation='left'
           title='Tours'
@@ -56,7 +58,7 @@ export default async function Tours({
         />
       </ParallaxSection>
 
-      <ParallaxSection imageUrl="https://images.unsplash.com/photo-1474224017046-182ece80b263?q=80&w=2070">
+      <ParallaxSection imageUrl="https://images.unsplash.com/photo-1675213131698-b3cd0b797eeb?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
         <ContentBlock
           orientation='left'
           title='Events'
@@ -74,9 +76,9 @@ export default async function Tours({
         />
       </ParallaxSection>
 
-      <ParallaxSection imageUrl="https://images.unsplash.com/photo-1474224017046-182ece80b263?q=80&w=2070">
+      <ParallaxSection imageUrl="https://images.unsplash.com/photo-1675213131942-0735b90312bb?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
         <ContentBlock
-          orientation='left'
+          orientation='right'
           title='Custom Tours'
           buttonText='More details'
           link='/contact'

@@ -54,6 +54,14 @@ export function Footer() {
                   href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}
                   className="hover:text-sage-300 transition-colors"
                 >
+                  {CONTACT.primaryPhone}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}
+                  className="hover:text-sage-300 transition-colors"
+                >
                   {CONTACT.phone}
                 </a>
               </li>
@@ -69,7 +77,7 @@ export function Footer() {
           </div>
 
           {/* Social */}
-{/*           <div>
+          {/*           <div>
             <h4 className="font-semibold mb-4">{footer.followUs}</h4>
             <ul className="space-y-2 text-sm">
               <li>

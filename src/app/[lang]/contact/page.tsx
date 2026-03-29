@@ -30,12 +30,21 @@ export default async function ContactPage({
               <h3 className="font-serif font-bold text-lg mb-3 text-stone-900">
                 {t.phone}
               </h3>
-              <a
-                href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}
-                className="text-sage-700 hover:text-sage-800 font-semibold"
-              >
-                {CONTACT.phone}
-              </a>
+              <div className='flex flex-col'>
+                <a
+                  href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}
+                  className="text-sage-700 hover:text-sage-800 font-semibold"
+                >
+                  {CONTACT.primaryPhone}
+                </a>
+                <a
+                  href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}
+                  className="text-sage-700 hover:text-sage-800 font-semibold"
+                >
+                  {CONTACT.phone}
+                </a>
+              </div>
+
             </div>
 
             {/* Email */}

@@ -78,7 +78,7 @@ export default async function TermsPage({
             </p>
             <ul className="list-disc list-inside space-y-2">
               <li><strong>{t.address}</strong> {t.addressDetails}</li>
-              <li><strong>{t.phone}</strong> {CONTACT.phone}</li>
+              <li><strong>{t.phone}</strong> {CONTACT.primaryPhone} {CONTACT.phone}</li>
               <li><strong>{t.email}</strong> {CONTACT.email}</li>
             </ul>
           </div>

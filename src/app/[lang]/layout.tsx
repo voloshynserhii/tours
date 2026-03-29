@@ -1,20 +1,20 @@
 import type { Metadata } from 'next';
-import { Roboto, Lora } from 'next/font/google';
+import { Oswald, Raleway } from 'next/font/google';
 import Script from 'next/script';
 import '../globals.css';
 import { Header, Footer, Providers } from '@/components';
 import { getDictionary, Locale } from '@/get-dictionary';
 
-const roboto = Roboto({
+const oswald = Oswald({
   weight: ['400', '700'],
   subsets: ['latin'],
-  variable: '--font-roboto',
+  variable: '--font-oswald',
 });
 
-const lora = Lora({
+const raleway = Raleway({
   weight: ['400', '700'],
   subsets: ['latin'],
-  variable: '--font-lora',
+  variable: '--font-raleway',
 });
 
 export const metadata: Metadata = {
@@ -57,7 +57,7 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <body
-        className={`${roboto.variable} ${lora.variable} font-sans antialiased bg-cream-50 text-stone-900`}
+        className={`${oswald.variable} ${raleway.variable} antialiased bg-cream-50 text-stone-900`}
         data-region={process.env.NEXT_PUBLIC_REGION ?? ''}
         data-channelcode={process.env.NEXT_PUBLIC_CHANNELCODE ?? ''}
       >
