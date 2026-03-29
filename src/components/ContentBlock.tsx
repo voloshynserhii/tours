@@ -12,10 +12,7 @@ interface ContentBlockProps {
   }[];
   buttonText?: string;
   link?: string;
-  features?: {
-    title: string;
-    features: string[];
-  };
+  features?: string[];
 }
 
 export const ContentBlock: React.FC<ContentBlockProps> = ({
@@ -82,8 +79,8 @@ export const ContentBlock: React.FC<ContentBlockProps> = ({
         </>
       )}
 
-      {features && (<div className="w-full flex justify-center md:justify-start">
-        <FeaturesList title={features.title} features={features.features} />
+      {features && (<div className={`w-full flex justify-center ${isLeftOriented ? 'md:justify-start' : 'md:justify-end'}`}>
+        <FeaturesList features={features} isLeftOriented={isLeftOriented} />
       </div>)}
     </div>
   );

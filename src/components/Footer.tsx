@@ -13,7 +13,7 @@ export function Footer() {
 
   const navItems = [
     { label: nav.tours, href: `/${lang}/tours` },
-    { label: nav.routes, href: `/${lang}/routes` },
+    /* { label: nav.routes, href: `/${lang}/routes` }, */
     { label: nav.accomodation, href: `/${lang}/accomodation` },
     { label: nav.contact, href: `/${lang}/contact` },
   ];

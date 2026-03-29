@@ -28,7 +28,7 @@ export function Header() {
 
   const navItems = [
     { label: navigation.tours, href: `/${lang}/tours` },
-    { label: navigation.routes, href: `/${lang}/routes` },
+/*     { label: navigation.routes, href: `/${lang}/routes` }, */
     { label: navigation.accomodation, href: `/${lang}/accomodation` },
     { label: navigation.contact, href: `/${lang}/contact` },
   ];

@@ -48,13 +48,10 @@ export default async function Tours({
           events={[
             { text: 'More details ', link: '/tours/training-camp' },
           ]}
-          features={{
-            title: '',
-            features: [
-              'Structured weeks designed for riders looking to improve.',
-              'Consistent climbs, quiet roads, and the perfect environment to focus on performance and progression.'
-            ],
-          }}
+          features={[
+            'Structured weeks designed for riders looking to improve.',
+            'Consistent climbs, quiet roads, and the perfect environment to focus on performance and progression.'
+          ]}
         />
       </ParallaxSection>
 
@@ -66,13 +63,10 @@ export default async function Tours({
             { text: 'Mediterranean Epic Gran Fondo', link: '/tours/mediterranean' },
             { text: 'La Vuelta Experiences', link: '/tours/la-vuelta' },
           ]}
-          features={{
-            title: '',
-            features: [
-              'Take part in carefully selected cycling events, with full support and local expertise.',
-              'Experience iconic rides without the usual stress and logistics.'
-            ],
-          }}
+          features={[
+            'Take part in carefully selected cycling events, with full support and local expertise.',
+            'Experience iconic rides without the usual stress and logistics.'
+          ]}
         />
       </ParallaxSection>
 
