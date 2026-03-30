@@ -1,11 +1,11 @@
 import { Button } from './Button';
 
-export function FinalCta() {
+export function FinalCta({ title, subtitle }: { title: string; subtitle: string }) {
   return (
     <div className="text-center py-20">
-      <h2 className="text-3xl md:text-5xl font-bold mb-4">Ready to Ride?</h2>
+      <h2 className="text-3xl md:text-5xl font-bold mb-4">{title}</h2>
       <p className="mb-8">
-        Get in touch to plan your trip or find the right experience for you.
+        {subtitle}
       </p>
       <Button>Enquire Now</Button>
     </div>

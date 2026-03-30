@@ -12,12 +12,13 @@ export default async function Tours({
 
   return (
     <div>
-      <ParallaxSection imageUrl="https://images.unsplash.com/photo-1715223445441-0a1bae6c3616?q=80&w=2662&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+      <ParallaxSection height='h-[80%]' imageUrl="https://images.unsplash.com/photo-1715223445441-0a1bae6c3616?q=80&w=2662&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
         <div className="text-center text-white uppercase min-h-[80vh] flex flex-col justify-center items-center">
           <div className='flex flex-col'>
             <h1 className="text-5xl md:text-8xl mb-14 inline-block pb-2 px-8">Choose Your Experience</h1>
             <h3 className="text-lg mb-4 lg:border-b lg:border-white/30 inline-block pb-2 px-8">Whether you’re here to explore, train, or take on an event — every ride starts
-              straight from the hotel front door.</h3>
+              straight from the hotel front door.
+            </h3>
           </div>
         </div>
       </ParallaxSection>

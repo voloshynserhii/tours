@@ -7,9 +7,10 @@ interface Props {
   children: React.ReactNode;
   className?: string;
   useFade?: boolean;
+  height?: string;
 }
 
-export const ParallaxSection = ({ imageUrl, children, className = "", useFade = true }: Props) => {
+export const ParallaxSection = ({ imageUrl, children, className = "", useFade = true, height = "h-full" }: Props) => {
   const parallax = useParallax<HTMLDivElement>({
     speed: -50,
   });
@@ -24,7 +25,7 @@ export const ParallaxSection = ({ imageUrl, children, className = "", useFade = 
         <img
           src={imageUrl}
           alt="Parallax background"
-          className="w-full h-full object-cover object-center"
+          className={`w-full h-full object-cover object-center ${height}`}
         />
         {useFade && <div className="absolute inset-0 bg-black/40" />}
       </div>

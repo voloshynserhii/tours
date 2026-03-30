@@ -70,7 +70,7 @@ export default async function Home({
       <ParallaxSection useFade={false} imageUrl="/images/background.png">
         <div>
           <AboutUs />
-          <FinalCta />
+          <FinalCta title="Ready to Ride?" subtitle="Start your journey today." />
         </div>
       </ParallaxSection>
     </div>

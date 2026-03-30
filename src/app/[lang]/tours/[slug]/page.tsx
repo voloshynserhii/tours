@@ -22,7 +22,7 @@ export default async function Tour({
 
   return (
     <div>
-      <ParallaxSection imageUrl={tour.image}>
+      <ParallaxSection imageUrl={tour.image} height='h-[80%]'>
         <div className="text-center text-white uppercase min-h-[70vh] flex flex-col justify-center items-center">
           <div className='flex flex-col'>
             <h1 className="text-5xl md:text-8xl mb-14 inline-block pb-2 px-8">{tour.title}</h1>
