@@ -23,14 +23,14 @@ export default async function Tours({
         </div>
       </ParallaxSection>
 
-<ParallaxSection useFade={false} imageUrl="/images/background.png">
-      {/* <div className="bg-[url(/images/background.png)] bg-cover bg-center text-center py-[100px] px-10"> */}
-      <div className="text-center py-[100px] px-10">
-        <p className="text-2xl font-bold">
-          Quiet mountain roads, smooth tarmac, and endless routes - more time riding, less
-          time getting there.
-        </p>
-      </div>
+      <ParallaxSection useFade={false} imageUrl="/images/background.png">
+        {/* <div className="bg-[url(/images/background.png)] bg-cover bg-center text-center py-[100px] px-10"> */}
+        <div className="text-center py-[100px] px-10">
+          <p className="text-2xl font-bold">
+            Quiet mountain roads, smooth tarmac, and endless routes - more time riding, less
+            time getting there.
+          </p>
+        </div>
       </ParallaxSection>
 
       <ParallaxSection imageUrl="https://plus.unsplash.com/premium_photo-1726761725215-cca50b7d6ec7?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">

@@ -1,20 +1,20 @@
 import type { Metadata } from 'next';
-import { Oswald, Raleway } from 'next/font/google';
+import { Anton, Inter } from 'next/font/google';
 import Script from 'next/script';
 import '../globals.css';
 import { Header, Footer, Providers } from '@/components';
 import { getDictionary, Locale } from '@/get-dictionary';
 
-const oswald = Oswald({
-  weight: ['400', '700'],
+const anton = Anton({
+  weight: ['400'],
   subsets: ['latin'],
-  variable: '--font-oswald',
+  variable: '--font-anton',
 });
 
-const raleway = Raleway({
+const inter = Inter({
   weight: ['400', '700'],
   subsets: ['latin'],
-  variable: '--font-raleway',
+  variable: '--font-inter',
 });
 
 export const metadata: Metadata = {
@@ -57,7 +57,7 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <body
-        className={`${oswald.variable} ${raleway.variable} antialiased bg-cream-50 text-stone-900`}
+        className={`${anton.variable} ${inter.variable} antialiased bg-cream-50 text-stone-900`}
         data-region={process.env.NEXT_PUBLIC_REGION ?? ''}
         data-channelcode={process.env.NEXT_PUBLIC_CHANNELCODE ?? ''}
       >

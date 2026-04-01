@@ -47,8 +47,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-oswald)', 'system-ui', '-apple-system', 'sans-serif'],
-        serif: ['var(--font-raleway)', 'Georgia', 'serif'],
+        sans: ['var(--font-inter)', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['var(--font-anton)', 'Georgia', 'serif'],
       },
       fontSize: {
         xs: ['0.75rem', { lineHeight: '1rem' }],
