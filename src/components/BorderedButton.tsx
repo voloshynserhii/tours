@@ -21,11 +21,8 @@ export const BorderedButton: React.FC<BorderedButtonProps> = ({ className, showA
   const commonClassName = `group relative w-full border border-white rounded border-2 py-2 px-4 flex items-center justify-center text-center transition-all duration-300 ${showArrow ? 'hover:bg-white' : ''} ${className || ''}`;
 
   const content = (
-    <span className={`text-lg md:text-2xl font-bold tracking-[0.15em] uppercase transition-colors duration-300 ${showArrow ? 'group-hover:text-black' : ''}`}>
+    <span className={`text-lg md:text-2xl text-white font-bold tracking-[0.15em] uppercase transition-colors duration-300 ${showArrow ? 'group-hover:text-black' : ''}`}>
       {text}
-{/*       {showArrow && (
-        <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">›</span>
-      )} */}
     </span>
   );
 
