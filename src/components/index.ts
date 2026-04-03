@@ -16,3 +16,4 @@ export { DynamicBorder } from './DynamicBorder'
 export { FeaturesList } from './FeaturesList'
 export { AboutUs } from './AboutUs'
 export { FinalCta } from './FinalCta'
+export { TourTabs } from './TourTabs';

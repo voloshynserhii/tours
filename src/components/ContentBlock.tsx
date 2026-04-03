@@ -63,7 +63,7 @@ export const ContentBlock: React.FC<ContentBlockProps> = ({
 
   return (
     <div className="flex flex-col items-center w-full max-w-4xl mx-auto text-white font-light px-4 lg:min-h-[300px]">
-      <h2 className={`w-full text-5xl md:text-8xl font-bold text-yellow-300 ${isLeftOriented ? 'text-left' : 'md:text-right'}`}>{title}</h2>
+      <h2 className={`w-full uppercase text-5xl md:text-8xl text-yellow-300 ${isLeftOriented ? 'text-left' : 'md:text-right'}`}>{title}</h2>
 
       {isLeftOriented ? (
         <>

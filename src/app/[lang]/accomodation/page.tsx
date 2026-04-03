@@ -37,14 +37,14 @@ export default async function Accomodation({
           <Image src="/images/rooms/ROOM_1_1.jpg" alt="Clean bedroom" className="object-cover md:h-[500px] w-full" width={200} height={300} />
         </div>
         <div className="p-8 md:p-16 flex flex-col items-end gap-8">
-          <h3 className="text-4xl md:text-7xl text-yellow-300 border-b-2 border-black pb-2">Private Rooms</h3>
+          <h3 className="text-4xl md:text-7xl text-yellow-300 border-b-2 border-black pb-2 uppercase">Private Rooms</h3>
           <p className='md:w-[80%] md:text-end text-lg font-bold'>Comfortable, quiet, and designed for recovery. Our 4 star rooms provide everything you need to rest properly after a day in the mountains.</p>
         </div>
       </div>
 
       <div className="grid md:grid-cols-2 items-center bg-gray-50">
         <div className="p-8 md:p-16 flex flex-col items-start gap-8">
-          <h3 className="md:w-[80%] text-4xl md:text-7xl text-yellow-300 border-b-2 border-black pb-2">Simple, Quality Food</h3>
+          <h3 className="md:w-[80%] text-4xl md:text-7xl text-yellow-300 border-b-2 border-black pb-2 uppercase">Simple, Quality Food</h3>
           <p className='md:w-[80%] text-lg font-bold text-end md:text-start'>Good food, done properly. Our Chef has designed a menu to support your riding while keeping things relaxed and enjoyable.</p>
         </div>
         <div className="h-full order-1 md:order-2">
@@ -54,7 +54,7 @@ export default async function Accomodation({
 
       <ParallaxSection useFade imageUrl="https://images.unsplash.com/photo-1675213131942-0735b90312bb?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
         <div className="py-20 text-center min-h-[60vh] flex flex-col justify-center items-center">
-          <h3 className="text-4xl md:text-7xl text-yellow-300 mb-8">Built for Cyclists</h3>
+          <h3 className="text-4xl md:text-7xl text-yellow-300 mb-8 uppercase">Built for Cyclists</h3>
           <div className="grid md:grid-cols-4 gap-8 max-w-7xl mx-auto p-8">
             {['Secure bike storage', 'Cleaning area', 'Basic tools & maintenance space', 'Route access directly from the hotel front door'].map((feature) => (
               <div key={feature} className='flex flex-row md:justify-center items-center gap-8'>
@@ -72,7 +72,7 @@ export default async function Accomodation({
 
       <div className="grid md:grid-cols-2 items-center">
         <div className="p-8 md:p-16 flex flex-col items-start gap-8">
-          <h3 className="text-4xl md:text-7xl mb-4">Space to Switch Off</h3>
+          <h3 className="text-4xl md:text-7xl mb-4 uppercase">Space to Switch Off</h3>
           <p className='md:w-[70%] text-lg font-bold'>After your ride, relax by the pool or unwind in the gardens. A calm, quiet setting designed to help you recover and recharge.</p>
         </div>
         <div className="h-full">
@@ -83,7 +83,7 @@ export default async function Accomodation({
       <div className="relative">
         <Image src="/images/hero1.jpg" alt="Rider returning home" className="w-full md:h-[80vh] object-cover" width={500} height={300} />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center p-4">
-          <h3 className="text-4xl md:text-6xl text-yellow-300 mb-12">Everything in One Place</h3>
+          <h3 className="text-4xl md:text-6xl text-yellow-300 mb-12 uppercase">Everything in One Place</h3>
           <p className="md:w-[50%] text-lg px-8">Ride straight from the door, return to comfort, and enjoy a setting built entirely around the cycling experience. No transfers. No stress. Just a better way to spend your time on and oﬀ the bike.</p>
         </div>
       </div>
@@ -91,7 +91,7 @@ export default async function Accomodation({
       <ParallaxSection useFade imageUrl="https://plus.unsplash.com/premium_photo-1661344207352-557c11bfa802?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
         <div className="w-full flex flex-col items-center justify-center gap-8 pt-[10%] pb-5">
           <div className='bg-black/60 w-full min-h-[200px] flex flex-col items-center justify-center gap-6 py-10'>
-            <h2 className='text-7xl uppercase text-white'>Plan your stay!</h2>
+            <h2 className='text-7xl uppercase text-white uppercase'>Plan your stay!</h2>
             <p className="md:w-[50%] text-2xl px-8 text-white text-center uppercase font-bold">Get in touch to check availability and start planning your trip.</p>
           </div>
 

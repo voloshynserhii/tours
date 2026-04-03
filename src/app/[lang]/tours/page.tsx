@@ -23,8 +23,7 @@ export default async function Tours({
         </div>
       </ParallaxSection>
 
-      <ParallaxSection useFade={false} imageUrl="/images/background.png">
-        {/* <div className="bg-[url(/images/background.png)] bg-cover bg-center text-center py-[100px] px-10"> */}
+      <ParallaxSection useFade={false} imageUrl="/images/background.svg">
         <div className="text-center py-[100px] px-10">
           <p className="text-2xl font-bold">
             Quiet mountain roads, smooth tarmac, and endless routes - more time riding, less

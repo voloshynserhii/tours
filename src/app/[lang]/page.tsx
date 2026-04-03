@@ -26,7 +26,7 @@ export default async function Home({
   return (
     <div>
       <ParallaxSection imageUrl="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070">
-        <div className="w-full text-white font-light uppercase min-h-[60vh] flex justify-start items-end px-5 md:px-20">
+        <div className="w-full text-white font-light uppercase min-h-[70vh] flex justify-start items-end px-5 md:px-20">
           <h1 className="text-5xl md:text-7xl mb-2 md:mb-10 leading-[50px] md:leading-[70px]">Castellón<br />Cycling<br />Co</h1>
         </div>
       </ParallaxSection>
@@ -57,7 +57,7 @@ export default async function Home({
         />
       </ParallaxSection>
 
-      <Slider slides={experienceSlides} backgroundImage="/images/background.png" />
+      <Slider slides={experienceSlides} backgroundImage="/images/background.svg" />
 
       <ParallaxSection imageUrl="https://images.unsplash.com/photo-1715223445399-adc8a1032ac8?q=80&w=2662&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
         <ContentBlock
@@ -67,7 +67,7 @@ export default async function Home({
         />
       </ParallaxSection>
 
-      <ParallaxSection useFade={false} imageUrl="/images/background.png">
+      <ParallaxSection useFade={false} imageUrl="/images/background.svg">
         <div>
           <AboutUs />
           <FinalCta title="Ready to Ride?" subtitle="Start your journey today." />

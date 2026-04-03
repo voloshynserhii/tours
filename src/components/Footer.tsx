@@ -50,48 +50,31 @@ export function Footer() {
             <h4 className="font-semibold mb-4">{contact.title}</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a
+                <Link
                   href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}
                   className="hover:text-sage-300 transition-colors"
                 >
                   {CONTACT.primaryPhone}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}
                   className="hover:text-sage-300 transition-colors"
                 >
                   {CONTACT.phone}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href={`mailto:${CONTACT.email}`}
                   className="hover:text-sage-300 transition-colors"
                 >
                   {CONTACT.email}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
-
-          {/* Social */}
-          {/*           <div>
-            <h4 className="font-semibold mb-4">{footer.followUs}</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="hover:text-sage-300 transition-colors">
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-sage-300 transition-colors">
-                  Facebook
-                </a>
-              </li>
-            </ul>
-          </div> */}
         </div>
 
         {/* Bottom */}
@@ -100,14 +83,14 @@ export function Footer() {
             <p>© {new Date().getFullYear()} {footer.copyright}</p>
             <p>
               {footer.developedBy}{' '}
-              <a
+              <Link
                 href="https://vosquery-lab.site/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-cream-50 transition-colors underline"
               >
                 Vo$QueryLab
-              </a>
+              </Link>
             </p>
           </div>
           <div className="flex gap-6">

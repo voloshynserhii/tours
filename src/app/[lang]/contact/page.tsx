@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { getDictionary, Locale } from '@/get-dictionary';
 import { ContactForm } from '@/components';
 import { CONTACT } from '@/lib/constants';
@@ -31,18 +32,18 @@ export default async function ContactPage({
                 {t.phone}
               </h3>
               <div className='flex flex-col'>
-                <a
+                <Link
                   href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}
                   className="text-sage-700 hover:text-sage-800 font-semibold"
                 >
                   {CONTACT.primaryPhone}
-                </a>
-                <a
+                </Link>
+                <Link
                   href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}
                   className="text-sage-700 hover:text-sage-800 font-semibold"
                 >
                   {CONTACT.phone}
-                </a>
+                </Link>
               </div>
 
             </div>
@@ -52,12 +53,12 @@ export default async function ContactPage({
               <h3 className="font-serif font-bold text-lg mb-3 text-stone-900">
                 {t.email}
               </h3>
-              <a
+              <Link
                 href={`mailto:${CONTACT.email}`}
                 className="text-sage-700 hover:text-sage-800 font-semibold"
               >
                 {CONTACT.email}
-              </a>
+              </Link>
             </div>
           </div>
 

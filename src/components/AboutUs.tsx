@@ -2,7 +2,7 @@ export const AboutUs = () => {
     return (
         <section className=" max-w-7xl mx-auto py-20 px-10 grid grid-cols-1 md:grid-cols-2 gap-10 bg-transparent items-center">
             <div className="">
-                <h2 className="text-5xl md:text-8xl font-bold mb-6 underline decoration-1 underline-offset-8">About Us</h2>
+                <h2 className="text-5xl md:text-7xl uppercase mb-6 underline decoration-1 underline-offset-8">About Us</h2>
                 <p className="text-lg text-gray-700 leading-relaxed mb-4">
                     Castellón Cycling Co. is built by riders, for riders.
                     Combining years of experience in hosting and outdoor experiences, we’ve created

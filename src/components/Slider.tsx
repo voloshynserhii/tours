@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import type { NavigationOptions } from 'swiper/types';
 import Image from 'next/image';
+import Link from 'next/link';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -115,8 +116,8 @@ export function Slider({ slides, className, backgroundImage }: SliderProps) {
 
                             return (
                                 <SwiperSlide key={`${slide.title}-${slide.image}`}>
-                                    <a
-                                        href={slide.link}
+                                    <Link
+                                        href={slide.link || '#'}
                                         onClick={(e) => {
                                             if (!isActive) {
                                                 e.preventDefault();
@@ -172,7 +173,7 @@ export function Slider({ slides, className, backgroundImage }: SliderProps) {
                                                 </span>}
                                             </div>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </SwiperSlide>
                             )
                         }
