@@ -40,7 +40,7 @@ export function Header() {
         h-[90px] md:h-[120px]
         transition-all duration-700
         text-sm uppercase tracking-wider
-        ${scrolled ? 'bg-black/60' : 'transparent'}`}
+        ${scrolled || pathname.includes('/contact') ? 'bg-black/60' : 'transparent'}`}
     >
       <div className="max-w-auto mx-auto h-full px-5 md:px-20 flex items-center justify-start relative gap-20">
         <Link

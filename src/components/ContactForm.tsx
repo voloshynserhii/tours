@@ -151,7 +151,7 @@ export function ContactForm({
       <button
         type="submit"
         disabled={loading}
-        className="w-full bg-[#c8b89a] text-cream-50 py-3 font-semibold hover:bg-[#b8a882] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="p-4 border-2 border-black text-black py-3 font-semibold hover:bg-black hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {loading ? 'Sending...' : contact.send}
       </button>

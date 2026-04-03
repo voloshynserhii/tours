@@ -69,9 +69,9 @@ export default async function Tour({
           <div className="absolute inset-0 bg-white/40 z-[-1]" />
           <h2 className="w-full uppercase text-5xl md:text-9xl text-white text-center">Ready to ride?</h2>
 
-          <div className='flex flex-row justify-between min-w-[70vw] cursor-pointer'>
+          <div className='flex flex-col md:flex-row gap-20 justify-between min-w-[70vw] cursor-pointer'>
             <Link href={'/contact'} className='border-4 border-black rounded-xl p-4 md:max-w-xs'>
-              <h3 className='uppercase text-8xl text-black mx-auto text-center'>Book here</h3>
+              <h3 className='uppercase text-3xl md:text-8xl text-black mx-auto text-center'>Book here</h3>
             </Link>
 
             <div className='w-full flex flex-row justify-end'>

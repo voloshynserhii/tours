@@ -13,8 +13,9 @@ export default async function ContactPage({
   const t = dict.Contact;
 
   return (
-    <>
-      <section className="py-section container mx-auto px-gutter my-40">
+    <section className="bg-[url(/images/background.svg)] bg-no-repeat bg-cover">
+      {/* <div className='h-[120px] bg-black/80'/> */}
+      <div className="container mx-auto px-gutter py-40">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Contact Information */}
           <div className="lg:col-span-1 space-y-8">
@@ -73,6 +74,7 @@ export default async function ContactPage({
           <h3 className="text-2xl font-serif font-bold mb-6 text-stone-900">
             {t.ourLocation}
           </h3>
+
           <div className="aspect-video bg-stone-200 rounded-lg overflow-hidden w-full lg:w-[75%]">
             <iframe
               width="100%"
@@ -84,7 +86,7 @@ export default async function ContactPage({
             />
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
