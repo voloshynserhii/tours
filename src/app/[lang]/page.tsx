@@ -25,7 +25,7 @@ export default async function Home({
 
   return (
     <div>
-      <ParallaxSection imageUrl="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070">
+      <ParallaxSection imageUrl="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070" videoUrl="/videos/hero.mp4" height="h-[80%]">
         <div className="w-full text-white font-light uppercase min-h-[70vh] flex justify-start items-end px-5 md:px-20">
           <h1 className="text-5xl md:text-7xl mb-2 md:mb-10 leading-[50px] md:leading-[70px]">Castellón<br />Cycling<br />Co</h1>
         </div>

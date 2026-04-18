@@ -96,7 +96,12 @@ export default async function Accomodation({
           </div>
 
           <div>
-            <BorderedButton text='enquiry now' showArrow link="/contact" />v
+            <BorderedButton text={
+              <div className='text-center p-4 uppercase text-3xl font-light'>
+                <h3>enquiry</h3>
+                <h3>now</h3>
+              </div>
+            } showArrow link="/contact" />
           </div>
 
         </div>

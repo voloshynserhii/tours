@@ -4,13 +4,14 @@ import { useParallax } from 'react-scroll-parallax';
 
 interface Props {
   imageUrl: string;
+  videoUrl?: string;
   children: React.ReactNode;
   className?: string;
   useFade?: boolean;
   height?: string;
 }
 
-export const ParallaxSection = ({ imageUrl, children, className = "", useFade = true, height = "h-full" }: Props) => {
+export const ParallaxSection = ({ imageUrl, videoUrl, children, className = "", useFade = true, height = "h-full" }: Props) => {
   const parallax = useParallax<HTMLDivElement>({
     speed: -50,
   });
@@ -22,12 +23,23 @@ export const ParallaxSection = ({ imageUrl, children, className = "", useFade = 
         className="absolute left-0 right-0 z-0"
         style={{ top: '-50%', bottom: '-50%' }}
       >
-        <img
-          src={imageUrl}
-          alt="Parallax background"
-          className={`w-full h-full object-cover object-center ${height}`}
-        />
-        {useFade && <div className="absolute inset-0 bg-black/40" />}
+        {videoUrl ? (
+          <video
+            src={videoUrl}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className={`w-full h-full object-cover object-center ${height}`}
+          />
+        ) : (
+          <img
+            src={imageUrl}
+            alt="Parallax background"
+            className={`w-full h-full object-cover object-center ${height}`}
+          />
+        )}
+        {useFade && !videoUrl && <div className="absolute inset-0 bg-black/40" />}
       </div>
 
       <div className="relative z-10 flex items-center justify-center py-12">
