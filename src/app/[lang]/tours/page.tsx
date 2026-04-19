@@ -1,5 +1,6 @@
 import { getDictionary, Locale } from '@/get-dictionary';
 import { ParallaxSection, ContentBlock } from '@/components';
+import Link from 'next/link';
 
 export default async function Tours({
   params,
@@ -12,18 +13,46 @@ export default async function Tours({
 
   return (
     <div>
-      <ParallaxSection height='h-[80%]' imageUrl="https://images.unsplash.com/photo-1715223445441-0a1bae6c3616?q=80&w=2662&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+      <ParallaxSection height='h-[80%]' useFade={false} imageUrl="/images/optimized/tours-hero-black.jpg" objectFit='contain'>
         <div className="text-center text-white uppercase min-h-[80vh] flex flex-col justify-center items-center">
           <div className='flex flex-col'>
-            <h1 className="text-5xl md:text-8xl mb-14 inline-block pb-2 px-8">Choose Your Experience</h1>
-            <h3 className="text-lg mb-4 lg:border-b lg:border-white/30 inline-block pb-2 px-8">Whether you’re here to explore, train, or take on an event — every ride starts
-              straight from the hotel front door.
-            </h3>
+            <h1 className="text-5xl md:text-8xl mb-14 inline-block pb-2 px-8">Tours</h1>
           </div>
         </div>
       </ParallaxSection>
 
-      <ParallaxSection useFade={false} imageUrl="/images/background.svg">
+      <ParallaxSection useFade={false} imageUrl="/images/optimized/tours-1.jpg" objectFit='cover'>
+        <div className="text-center uppercase min-h-[80vh] flex flex-col justify-center items-center">
+          <div className='flex flex-col'>
+            <h2 className="text-5xl text-yellow-300 md:text-8xl mb-14 inline-block pb-2 px-8">Choose your ride</h2>
+          </div>
+        </div>
+      </ParallaxSection>
+
+      <div className="flex flex-col md:flex-row w-full h-[70vh]">
+        <Link href={`/${lang}/tours/road`} className="relative w-full md:w-1/2 h-1/2 md:h-full block group overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
+            style={{ backgroundImage: 'url(http://localhost:3000/_next/image?url=%2Fimages%2Fexperiences%2F2.png&w=3840&q=75)' }}
+          />
+          <div className="absolute inset-0 bg-black/10 group-hover:bg-black/40 transition-colors duration-500" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <h3 className="text-yellow-300 text-4xl md:text-8xl uppercase tracking-wider">Road</h3>
+          </div>
+        </Link>
+        <Link href={`/${lang}/tours/gravel`} className="relative w-full md:w-1/2 h-1/2 md:h-full block group overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
+            style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1675213442157-f6feba921d31?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHJpZGUlMjBiaWN5Y2xlfGVufDB8MHwwfHx8MA%3D%3D)' }}
+          />
+          <div className="absolute inset-0 bg-black/10 group-hover:bg-black/40 transition-colors duration-500" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <h3 className="text-yellow-300 text-4xl md:text-8xl uppercase tracking-wider">Gravel</h3>
+          </div>
+        </Link>
+      </div>
+
+      {/* <ParallaxSection useFade={false} imageUrl="/images/background.svg">
         <div className="text-center py-[100px] px-10">
           <p className="text-2xl font-bold">
             Quiet mountain roads, smooth tarmac, and endless routes - more time riding, less
@@ -80,7 +109,7 @@ export default async function Tours({
           buttonText='More details'
           link='/contact'
         />
-      </ParallaxSection>
+      </ParallaxSection> */}
     </div>
   );
 }

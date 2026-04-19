@@ -9,9 +9,10 @@ interface Props {
   className?: string;
   useFade?: boolean;
   height?: string;
+  objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
 }
 
-export const ParallaxSection = ({ imageUrl, videoUrl, children, className = "", useFade = true, height = "h-full" }: Props) => {
+export const ParallaxSection = ({ imageUrl, videoUrl, children, className = "", useFade = true, height = "h-full", objectFit = "cover" }: Props) => {
   const parallax = useParallax<HTMLDivElement>({
     speed: -50,
   });
@@ -30,13 +31,13 @@ export const ParallaxSection = ({ imageUrl, videoUrl, children, className = "", 
             muted
             loop
             playsInline
-            className={`w-full h-full object-cover object-center ${height}`}
+            className={`w-full h-full object-${objectFit} object-center ${height}`}
           />
         ) : (
           <img
             src={imageUrl}
             alt="Parallax background"
-            className={`w-full h-full object-cover object-center ${height}`}
+            className={`w-full h-full object-${objectFit} object-center ${height}`}
           />
         )}
         {useFade && !videoUrl && <div className="absolute inset-0 bg-black/40" />}
