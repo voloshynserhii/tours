@@ -33,7 +33,7 @@ export default async function Tours({
         <Link href={`/${lang}/tours/road`} className="relative w-full md:w-1/2 h-1/2 md:h-full block group overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
-            style={{ backgroundImage: 'url(http://localhost:3000/_next/image?url=%2Fimages%2Fexperiences%2F2.png&w=3840&q=75)' }}
+            style={{ backgroundImage: 'url(/images/experiences/2.png)' }}
           />
           <div className="absolute inset-0 bg-black/10 group-hover:bg-black/40 transition-colors duration-500" />
           <div className="absolute inset-0 flex items-center justify-center">
@@ -43,7 +43,7 @@ export default async function Tours({
         <Link href={`/${lang}/tours/gravel`} className="relative w-full md:w-1/2 h-1/2 md:h-full block group overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
-            style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1675213442157-f6feba921d31?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHJpZGUlMjBiaWN5Y2xlfGVufDB8MHwwfHx8MA%3D%3D)' }}
+            style={{ backgroundImage: `url('/images/optimized/gravel-hero.png')` }}
           />
           <div className="absolute inset-0 bg-black/10 group-hover:bg-black/40 transition-colors duration-500" />
           <div className="absolute inset-0 flex items-center justify-center">
