@@ -27,7 +27,7 @@ export const ParallaxSection = ({ imageUrl, videoUrl, children, className = "", 
     speed: -50,
   });
 
-  const isMobile = windowWidth > 0 && windowWidth < 768;
+  const isMobile = windowWidth > 0 && windowWidth < 1200;
   const currentObjectFit = isMobile ? 'cover' : objectFit;
 
   const backgroundContent = (
@@ -46,7 +46,7 @@ export const ParallaxSection = ({ imageUrl, videoUrl, children, className = "", 
           src={imageUrl}
           alt="Parallax background"
           fill
-          style={{ objectFit: currentObjectFit }}
+          objectFit={currentObjectFit}
           className={`object-cover md:object-${objectFit} object-center ${height}`}
           priority
         />
