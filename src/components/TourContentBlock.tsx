@@ -43,7 +43,7 @@ export const TourContentBlock: React.FC<ContentBlockProps> = ({
         />
         
         <div className={`absolute inset-y-0 flex  p-8 w-full pointer-events-none z-10 ${isRightOriented ? 'justify-start' : 'justify-end'}`}>
-          <h2 className={`uppercase text-[190px] text-yellow-300 max-w-[50%] leading-[1] ${isRightOriented ? 'text-start' : 'text-end'}`}>
+          <h2 className={`uppercase text-5xl md:text-8xl xl:text-[170px] text-yellow-300 max-w-[50%] leading-[1] ${isRightOriented ? 'text-start' : 'text-end'}`}>
             {title}
           </h2>
         </div>
@@ -61,7 +61,7 @@ export const TourContentBlock: React.FC<ContentBlockProps> = ({
           {/* Основний текст */}
           {description && (
             <div className="flex flex-col gap-4 text-sm md:text-base font-medium leading-relaxed text-center">
-              <p className='text-lg font-bold'>{description}</p>
+              <div className='text-lg font-bold'>{description}</div>
             </div>
           )}
 

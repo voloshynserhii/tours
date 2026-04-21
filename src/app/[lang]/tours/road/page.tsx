@@ -44,8 +44,8 @@ export default async function Road({
       </ParallaxSection>
 
       <ParallaxSection useFade={false} imageUrl='/images/optimized/IMG_1479.jpg' height='h-[80%]' objectFit='contain'>
-        <div className="min-h-[70vh] w-full max-w-7xl flex flex-row justify-end gap-20 px-10 py-10">
-          <h2 className="w-[30%] uppercase text-3xl md:text-7xl text-yellow-300 text-end">Choose your experience</h2>
+        <div className="min-h-[70vh] w-full mr-[5%] flex flex-row justify-end gap-20 px-10 py-10">
+          <h2 className="w-full md:w-[50%] xl:w-[30%] uppercase text-3xl md:text-7xl text-yellow-300 text-end">Choose your experience</h2>
         </div>
         <div className='absolute bottom-0 left-0 p-8 bg-white max-w-lg flex flex-col gap-6'>
           <p className='text-lg font-bold'>Whether you are here to explore, train or take on an event - each and every tour is built around riding straight from your door.</p>
