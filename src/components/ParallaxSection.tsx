@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParallax } from 'react-scroll-parallax';
 import Image from 'next/image';
 
@@ -14,9 +14,21 @@ interface Props {
 }
 
 export const ParallaxSection = ({ imageUrl, videoUrl, children, className = "", useFade = true, height = "h-full", objectFit = "cover" }: Props) => {
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const parallax = useParallax<HTMLDivElement>({
     speed: -50,
   });
+
+  const isMobile = windowWidth > 0 && windowWidth < 768;
+  const currentObjectFit = isMobile ? 'cover' : objectFit;
 
   const backgroundContent = (
     <>
@@ -27,14 +39,15 @@ export const ParallaxSection = ({ imageUrl, videoUrl, children, className = "", 
           muted
           loop
           playsInline
-          className={`w-full h-full object-${objectFit} object-center ${height}`}
+          className={`w-full h-full object-cover md:object-${objectFit} object-center ${height}`}
         />
       ) : (
         <Image
           src={imageUrl}
           alt="Parallax background"
           fill
-          className={`object-${objectFit} object-center ${height}`}
+          style={{ objectFit: currentObjectFit }}
+          className={`object-cover md:object-${objectFit} object-center ${height}`}
           priority
         />
       )}
