@@ -7,9 +7,11 @@ type Orientation = 'left' | 'right';
 interface ContentBlockProps {
   imageUrl: string;
   orientation: Orientation;
-  title: string;
+  title: string | React.ReactNode;
   subTitle?: string;
+  subTitleStyle?: string;
   description?: string | React.ReactNode;
+  descriptionStyle?: string;
   events?: {
     text: string;
     link?: string;
@@ -23,7 +25,9 @@ export const TourContentBlock: React.FC<ContentBlockProps> = ({
   orientation,
   title,
   subTitle,
+  subTitleStyle = 'text-2xl md:text-3xl text-center',
   description,
+  descriptionStyle = 'text-center',
   events = [],
   buttonText,
   link,
@@ -32,35 +36,33 @@ export const TourContentBlock: React.FC<ContentBlockProps> = ({
 
   return (
     <div className={`relative w-full mx-auto min-h-[600px] flex flex-col md:flex-row ${isRightOriented ? '' : 'md:flex-row-reverse'}`}>
-      
+
       <div className="relative w-full md:w-[75%] min-h-[400px] md:min-h-[600px] flex-shrink-0">
-        <Image 
-          src={imageUrl} 
-          alt={title} 
+        <Image
+          src={imageUrl}
+          alt={title?.toString() || 'Content Image'}
           className="absolute inset-0 w-full h-full object-cover"
           width={1000}
           height={800}
         />
-        
+
         <div className={`absolute inset-y-0 flex  p-8 w-full pointer-events-none z-10 ${isRightOriented ? 'justify-start' : 'justify-end'}`}>
-          <h2 className={`uppercase text-5xl md:text-8xl xl:text-[170px] text-yellow-300 max-w-[50%] leading-[1] ${isRightOriented ? 'text-start' : 'text-end'}`}>
+          <h2 className={`uppercase text-5xl md:text-8xl xl:text-[170px] text-yellow-300 max-w-[70%] leading-[1] ${isRightOriented ? 'text-start' : 'text-end'}`}>
             {title}
           </h2>
         </div>
       </div>
 
-      <div className="relative z-20 w-full md:w-[25%] bg-white text-black p-6 py-16 flex flex-col shadow-2xl min-h-full flex-shrink-0">
+      <div className="relative z-20 w-full md:w-[25%] bg-white text-black p-6 py-16 flex flex-col gap-4 shadow-2xl min-h-full flex-shrink-0">
+        {subTitle && (
+          <h3 className={`${subTitleStyle} uppercase leading-tight`}>
+            {subTitle}
+          </h3>
+        )}
         <div className="flex flex-col gap-12 h-full">
-          
-          {subTitle && (
-            <h3 className="text-2xl md:text-3xl uppercase leading-tight tracking-tight text-center">
-              {subTitle}
-            </h3>
-          )}
-
           {/* Основний текст */}
           {description && (
-            <div className="flex flex-col gap-4 text-sm md:text-base font-medium leading-relaxed text-center">
+            <div className={`flex flex-col gap-4 text-sm md:text-base font-medium leading-relaxed ${descriptionStyle}`}>
               <div className='text-lg font-bold'>{description}</div>
             </div>
           )}
@@ -84,10 +86,10 @@ export const TourContentBlock: React.FC<ContentBlockProps> = ({
           {/* Головна кнопка */}
           {buttonText && (
             <div className="mt-4 pt-4 border-t border-gray-100">
-              <BorderedButton 
-                text={buttonText} 
-                link={link} 
-                showArrow 
+              <BorderedButton
+                text={buttonText}
+                link={link}
+                showArrow
                 isBlack={true}
               />
             </div>

@@ -1,7 +1,8 @@
-import Image from 'next/image';
+import Link from 'next/link';
 import { getDictionary, Locale } from '@/get-dictionary';
-import { AboutUs, FinalCta, ParallaxSection, Slider, ContentBlock } from '@/components';
+import { AboutUs, FinalCta, ParallaxSection, Slider, ContentBlock, TourContentBlock } from '@/components';
 import { experiences } from '@/content/experiences';
+import { slides } from '@/content/slides';
 
 export default async function Home({
   params,
@@ -12,65 +13,101 @@ export default async function Home({
   const dict = await getDictionary(lang);
   const locale = lang;
 
-  const experienceSlides = experiences.map((experience) => {
-    const experienceData = dict.Experiences.experiences.find((e: any) => e.id === experience.id);
-
-    return {
-      image: experience.image,
-      mobileImage: experience.mobileImage,
-      title: experienceData?.name,
-      subtitle: experienceData?.description,
-    };
-  });
-
   return (
     <div>
       <ParallaxSection imageUrl="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070" videoUrl="/videos/hero.mp4" height="h-[80%]">
-        <div className="w-full text-white font-light uppercase min-h-[70vh] flex justify-start items-end px-5 md:px-20">
-          <h1 className="text-5xl md:text-7xl mb-2 md:mb-10 leading-[50px] md:leading-[70px]">Castellón<br />Cycling<br />Co</h1>
+        <div className="w-full text-white font-light uppercase min-h-[70vh] flex justify-center items-center">
+          <h1 className="text-5xl md:text-[180px] mt-[5%]">Ride More</h1>
         </div>
       </ParallaxSection>
 
-      <ParallaxSection imageUrl="https://images.unsplash.com/photo-1675213442157-f6feba921d31?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHJpZGUlMjBiaWN5Y2xlfGVufDB8MHwwfHx8MA%3D%3D">
-        <ContentBlock
-          orientation='left'
-          title='Just Ride. Epic routes from the first kilometre'
-          texts={['Quiet roads. No traﬃc. No transfers.', 'Discover one of Spain’s last truly undiscovered cycling regions - right from your doorstep.', 'Located at the foot of the Maestrat mountains, Castellón Cycling Co. gives you direct access to smooth Spanish tarmac, epic climbs, and quiet roads. Ride without the crowds or logistics of traditional cycling destinations.']}
-          buttonText='View Tours'
-          link='/tours'
-        />
+      <ParallaxSection useFade={false} imageUrl="/images/optimized/epic.jpg" objectFit='contain'>
+        <div className='flex flex-row justify-end h-full w-full pr-[5%]'>
+          <div className='w-[50%] flex flex-col items-end text-right'>
+            <h2 className="text-3xl md:text-[150px] uppercase text-yellow-300 leading-[1]">Epic</h2>
+            <h3 className="text-3xl md:text-[80px] uppercase text-yellow-300 leading-[1] w-[50%]">Routes from the first kilometre</h3>
+          </div>
+        </div>
+
+        <div className='absolute bottom-[50%] left-0 translate-y-1/2 p-8 bg-white max-w-lg flex flex-col gap-6'>
+          <p className='text-lg font-bold'>Discover one of Spain’s last truly undiscovered cycling regions</p>
+          <p className='text-lg font-bold'>Located at the foot of the Maestrat mountains, Castellón Cycling Co. gives you direct access to smooth Spanish tarmac, epic climbs, and quiet roads.</p>
+          <p className='text-lg font-bold'>Ride without the crowds or logistics of traditional cycling destinations.</p>
+        </div>
       </ParallaxSection>
 
-      <ParallaxSection imageUrl="https://images.unsplash.com/photo-1675213131942-0735b90312bb?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-        <ContentBlock
-          orientation='right'
-          title='Start Where The Real Route Begins'
-          texts={['Our location is key. Where most cycling trips begin with a transfer, busy traﬃc, or boring routes to the “good bit” - here we focus on qualitiy and less on crowds.', 'Step outside the hotel and ride straight into the mountains.', 'No vans, no busy approach roads, no wasted time.']}
-        />
+      <div className="relative z-10 w-full h-0 flex justify-center items-center pointer-events-none">
+        <div className="absolute left-[5%] text-start text-black font-bold text-5xl md:text-[60px] uppercase leading-none [-webkit-text-stroke:1px_white] font-display">
+          <p>No traffic.</p>
+          <p>No transfers.</p>
+        </div>
+      </div>
+
+      <TourContentBlock
+        imageUrl="/images/optimized/start.jpg"
+        orientation="right"
+        title={<div className='flex flex-col flex flex-col justify-end h-full'>
+          <h2 className="text-start uppercase text-3xl md:text-7xl text-yellow-300 w-[70%]">Start Where The Real Route</h2>
+          <h2 className='text-start'>Begins</h2>
+        </div>}
+        subTitle='Our location is key'
+        description={<div className='flex flex-col gap-6'>
+          <p>Our location is key. Where most cycling trips begin with a transfer, busy traﬃc, or boring routes to the “good bit”</p>
+          <p>More we focus on qualitiy and less on crowds.</p>
+          <p>Step outside the hotel and ride straight into the mountains.</p>
+        </div>} events={[
+          { text: 'View Hotel', link: '#' },
+        ]}
+      />
+
+      <ParallaxSection useFade={false} imageUrl="/images/optimized/no-traffic.jpg" objectFit='contain' height='h-[80%]'>
+        <div className='flex flex-row justify-center h-full w-full min-h-[70vh]'>
+          <div className='w-full flex flex-col items-center justify-center text-center'>
+            <h2 className="text-3xl md:text-[80px] uppercase text-yellow-300 leading-[1]">No Traffic. No pelotons.</h2>
+            <h3 className="text-3xl md:text-[150px] uppercase text-yellow-300 leading-[1] w-[50%]">Just Riding</h3>
+          </div>
+        </div>
       </ParallaxSection>
 
-      <ParallaxSection imageUrl="https://plus.unsplash.com/premium_photo-1661344207352-557c11bfa802?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-        <ContentBlock
-          orientation='left'
-          title='No traﬃc. No pelotons. Just riding.'
-          texts={['While other cycling destinations are becoming increasingly busy, Castellón remains largely untouched.', 'Expect the same immaculate Spanish tarmac, epic climbs, and incredible views.', 'But often with the road entirely to yourself. Uninterrupted riding from the very first kilometre.']}
-        />
-      </ParallaxSection>
+      <TourContentBlock
+        imageUrl="/images/optimized/ride-more.jpg"
+        orientation="left"
+        title=''
+        subTitle='Ride More. Waste Less.'
+        subTitleStyle='text-3xl md:text-6xl text-start'
+        description={<div className='flex flex-col gap-6'>
+          <p>While other cycling destinations are becoming increasingly busy, Castellón remains largely untouched.</p>
+          <p>Expect the same immaculate Spanish tarmac, epic climbs, and incredible views.</p>
+          <p>But often with the road entirely to yourself. Uninterrupted riding from the very first kilometre.</p>
+        </div>} 
+        descriptionStyle='text-start'
+      />
 
-      <Slider slides={experienceSlides} backgroundImage="/images/background.svg" />
+      <Slider slides={slides} backgroundImage="/images/background.svg" />
 
-      <ParallaxSection imageUrl="https://images.unsplash.com/photo-1715223445399-adc8a1032ac8?q=80&w=2662&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-        <ContentBlock
-          orientation='left'
-          title='Ride More. Waste Less.'
-          texts={['Every detail is designed to maximise your time on the bike.', 'More riding, fewer interruptions, and a setting that lets you fully switch oﬀ when the day is done.', 'This is cycling, stripped back to what matters.']}
-        />
-      </ParallaxSection>
+      <TourContentBlock
+        imageUrl="/images/optimized/custom-1.jpg"
+        orientation="right"
+        title=''
+        subTitle='About Us'
+        subTitleStyle='text-4xl md:text-7xl text-center'
+        description={<div className='flex flex-col gap-6'>
+          <p>Castellón Cycling Co. is built by riders, for riders.</p>
+          <p>Combining years of experience in hosting and outdoor experiences, we’ve created a cycling destination that balances performance with comfort.</p>
+          <p>Our mission was to create a one-stop Spanish cycling experience that can combine tours, events and training with a 4 star rural hotel experience, with on-site restaurant dining, bike storage and maintenance facilities all in one place.</p>
+        </div>} 
+      />
 
-      <ParallaxSection useFade={false} imageUrl="/images/background.svg">
-        <div>
-          <AboutUs />
-          <FinalCta title="Ready to Ride?" subtitle="Start your journey today." />
+      <ParallaxSection useFade={false} imageUrl='/images/optimized/road-last.jpg' height='h-[80%]' objectFit='contain'>
+        <div className="min-h-[70vh] flex flex-col gap-20 px-10 py-10">
+          <h2 className="w-full uppercase text-5xl md:text-9xl text-yellow-300 text-center">Ready to ride?</h2>
+
+          <div className='flex justify-center min-w-[70vw] cursor-pointer mt-40'>
+            <Link href={`/${lang}/contact`} className='border-2 border-yellow-300 rounded-xl px-16 py-4 md:max-w-xs'>
+              <h3 className='uppercase text-3xl md:text-4xl text-yellow-300 mx-auto text-center'>Book</h3>
+              <h3 className='uppercase text-3xl md:text-4xl text-yellow-300 mx-auto text-center'>here</h3>
+            </Link>
+          </div>
         </div>
       </ParallaxSection>
     </div>
