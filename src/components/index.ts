@@ -18,3 +18,4 @@ export { AboutUs } from './AboutUs'
 export { FinalCta } from './FinalCta'
 export { TourTabs } from './TourTabs';
 export { TourContentBlock } from './TourContentBlock';
+export { ReadyToRide } from './ReadyToRide';

@@ -7,8 +7,8 @@ type Orientation = 'left' | 'right';
 interface ContentBlockProps {
   imageUrl: string;
   orientation: Orientation;
-  title: string | React.ReactNode;
-  subTitle?: string;
+  title?: string | React.ReactNode;
+  subTitle?: string | React.ReactNode;
   subTitleStyle?: string;
   description?: string | React.ReactNode;
   descriptionStyle?: string;

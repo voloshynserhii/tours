@@ -1,7 +1,7 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { getDictionary, Locale } from '@/get-dictionary';
-import { AboutUs, FinalCta, ParallaxSection, Slider, ContentBlock, TourContentBlock } from '@/components';
-import { experiences } from '@/content/experiences';
+import { ParallaxSection, Slider, TourContentBlock, ReadyToRide } from '@/components';
 import { slides } from '@/content/slides';
 
 export default async function Home({
@@ -15,14 +15,14 @@ export default async function Home({
 
   return (
     <div>
-      <ParallaxSection imageUrl="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070" videoUrl="/videos/hero.mp4" height="h-[80%]">
-        <div className="w-full text-white font-light uppercase min-h-[70vh] flex justify-center items-center">
+      <ParallaxSection imageUrl="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070" videoUrl="/videos/hero.mp4" >
+        <div className="w-full text-white font-light uppercase min-h-[80vh] flex justify-center items-center">
           <h1 className="text-5xl md:text-[180px] mt-[5%]">Ride More</h1>
         </div>
       </ParallaxSection>
 
       <ParallaxSection useFade={false} imageUrl="/images/optimized/epic.jpg" objectFit='contain'>
-        <div className='flex flex-row justify-end h-full w-full pr-[5%]'>
+        <div className='flex flex-row justify-end h-full w-full pr-[5%] py-[10%]'>
           <div className='w-[50%] flex flex-col items-end text-right'>
             <h2 className="text-3xl md:text-[150px] uppercase text-yellow-300 leading-[1]">Epic</h2>
             <h3 className="text-3xl md:text-[80px] uppercase text-yellow-300 leading-[1] w-[50%]">Routes from the first kilometre</h3>
@@ -50,7 +50,10 @@ export default async function Home({
           <h2 className="text-start uppercase text-3xl md:text-7xl text-yellow-300 w-[70%]">Start Where The Real Route</h2>
           <h2 className='text-start'>Begins</h2>
         </div>}
-        subTitle='Our location is key'
+        subTitle={<div className="flex flex-col gap-[20px]">
+          <Image src="/images/logo-hotel.jpeg" alt="Hotel Logo" width={300} height={150} className="w-full h-auto object-contain" />
+          <span>Our location is key</span>
+        </div>}
         description={<div className='flex flex-col gap-6'>
           <p>Our location is key. Where most cycling trips begin with a transfer, busy traﬃc, or boring routes to the “good bit”</p>
           <p>More we focus on qualitiy and less on crowds.</p>
@@ -72,7 +75,6 @@ export default async function Home({
       <TourContentBlock
         imageUrl="/images/optimized/ride-more.jpg"
         orientation="left"
-        title=''
         subTitle='Ride More. Waste Less.'
         subTitleStyle='text-3xl md:text-6xl text-start'
         description={<div className='flex flex-col gap-6'>
@@ -88,7 +90,6 @@ export default async function Home({
       <TourContentBlock
         imageUrl="/images/optimized/custom-1.jpg"
         orientation="right"
-        title=''
         subTitle='About Us'
         subTitleStyle='text-4xl md:text-7xl text-center'
         description={<div className='flex flex-col gap-6'>
@@ -98,18 +99,7 @@ export default async function Home({
         </div>} 
       />
 
-      <ParallaxSection useFade={false} imageUrl='/images/optimized/road-last.jpg' height='h-[80%]' objectFit='contain'>
-        <div className="min-h-[70vh] flex flex-col gap-20 px-10 py-10">
-          <h2 className="w-full uppercase text-5xl md:text-9xl text-yellow-300 text-center">Ready to ride?</h2>
-
-          <div className='flex justify-center min-w-[70vw] cursor-pointer mt-40'>
-            <Link href={`/${lang}/contact`} className='border-2 border-yellow-300 rounded-xl px-16 py-4 md:max-w-xs'>
-              <h3 className='uppercase text-3xl md:text-4xl text-yellow-300 mx-auto text-center'>Book</h3>
-              <h3 className='uppercase text-3xl md:text-4xl text-yellow-300 mx-auto text-center'>here</h3>
-            </Link>
-          </div>
-        </div>
-      </ParallaxSection>
+      <ReadyToRide lang={lang} />
     </div>
   );
 }

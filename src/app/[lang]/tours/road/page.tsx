@@ -1,6 +1,5 @@
 import { getDictionary, Locale } from '@/get-dictionary';
-import { ParallaxSection, Slider, TourContentBlock } from '@/components';
-import Link from 'next/link';
+import { ParallaxSection, Slider, TourContentBlock, ReadyToRide } from '@/components';
 import { slides } from '@/content/slides';
 
 export default async function Road({
@@ -21,7 +20,7 @@ export default async function Road({
         </div>
       </ParallaxSection>
 
-      <ParallaxSection useFade={false} imageUrl='/images/optimized/IMG_1479.jpg' height='h-[80%]' objectFit='contain'>
+      <ParallaxSection useFade={false} imageUrl='/images/optimized/road-10.jpg' height='h-[80%]' objectFit='contain'>
         <div className="min-h-[70vh] w-full mr-[5%] flex flex-row justify-end gap-20 px-10 py-10">
           <h2 className="w-full md:w-[50%] xl:w-[30%] uppercase text-3xl md:text-7xl text-yellow-300 text-end">Choose your experience</h2>
         </div>
@@ -56,7 +55,7 @@ export default async function Road({
       />
 
       <TourContentBlock
-        imageUrl="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070"
+        imageUrl="/images/optimized/event-2.png"
         orientation="right"
         title="Events"
         subTitle='Epic local events, right on your doorstep'
@@ -83,18 +82,7 @@ export default async function Road({
 
       <Slider slides={slides} backgroundImage="/images/background.svg" />
 
-      <ParallaxSection useFade={false} imageUrl='/images/optimized/road-last.jpg' height='h-[80%]' objectFit='contain'>
-        <div className="min-h-[70vh] flex flex-col gap-20 px-10 py-10">
-          <h2 className="w-full uppercase text-5xl md:text-9xl text-yellow-300 text-center">Ready to ride?</h2>
-
-          <div className='flex justify-center min-w-[70vw] cursor-pointer mt-40'>
-            <Link href={`/${lang}/contact`} className='border-2 border-yellow-300 rounded-xl px-16 py-4 md:max-w-xs'>
-              <h3 className='uppercase text-3xl md:text-4xl text-yellow-300 mx-auto text-center'>Book</h3>
-              <h3 className='uppercase text-3xl md:text-4xl text-yellow-300 mx-auto text-center'>here</h3>
-            </Link>
-          </div>
-        </div>
-      </ParallaxSection>
+      <ReadyToRide lang={lang} />
     </div>
   )
 }

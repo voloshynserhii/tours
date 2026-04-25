@@ -54,7 +54,7 @@ export function Slider({ slides, className, backgroundImage }: SliderProps) {
     }, [swiperInstance]);
 
     return (
-        <div className={`relative mx-auto ${className}`}>
+        <div className={`relative mx-auto bg-white ${className}`}>
             {backgroundImage && (
                 <div className="absolute inset-0">
                     <Image
