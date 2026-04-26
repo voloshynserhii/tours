@@ -1,7 +1,6 @@
 import { getDictionary, Locale } from '@/get-dictionary';
-import { ParallaxSection, TourTabs } from '@/components';
+import { ParallaxSection, TourTabs, TourContentBlock, ReadyToRide } from '@/components';
 import { tours } from '@/content/tours';
-import Link from 'next/link';
 
 export default async function Tour({
   params,
@@ -21,75 +20,149 @@ export default async function Tour({
     </div>;
   }
 
+  const {
+    title,
+    subtitle,
+    section1Title = '',
+    dates,
+    location,
+    averageDistance,
+    flights,
+    experienceTitle,
+    experienceDescription,
+    included = [],
+    days = [],
+    dayImages = [],
+    notIncluded = [],
+    prices = []
+  } = tour;
+
   return (
     <div>
-      <ParallaxSection imageUrl={tour.images?.[0] || ''} height='h-[80%]'>
-        <div className="text-center text-white uppercase min-h-[70vh] flex flex-col justify-center items-center">
+      <ParallaxSection useFade={false} objectFit='contain' height='h-[80%]' imageUrl='/images/optimized/road-7-black.jpg' >
+        <div className="text-center text-white uppercase min-h-[65vh] flex flex-col justify-center items-center">
           <div className='flex flex-col'>
-            <h1 className="text-5xl md:text-8xl mb-14 inline-block pb-2 px-8">{tour.title}</h1>
+            <h1 className="text-5xl md:text-8xl inline-block px-8">{title}</h1>
+            {subtitle && (
+              <h2 className="text-2xl md:text-5xl text-yellow-300">{subtitle}</h2>
+            )}
           </div>
         </div>
       </ParallaxSection>
 
-      <ParallaxSection imageUrl={tour.images?.[1] || ''} height='h-[80%]'>
-        <div className="min-h-[70vh] flex flex-col gap-8 px-10">
-          <h2 className="w-full uppercase text-5xl md:text-8xl text-yellow-300 md:pl-[30%] text-center md:text-end">{tour.section1title}</h2>
+      <ParallaxSection useFade={false} imageUrl='/images/optimized/road-10.jpg' height='h-[80%]' objectFit='contain'>
+        <div className="min-h-[50vh] w-full mr-[5%] flex flex-row justify-end gap-20 px-10 py-10">
+          {section1Title}
+        </div>
 
-          <div className='bg-black/40 p-4 md:max-w-xs rounded-xl'>
-            <div className='flex flex-col gap-4'>
-              {tour.information?.map(info => (
-                <div key={Object.keys(info)[0]} className='flex flex-col justify-between text-white text-lg font-light'>
-                  <h3 className='uppercase text-yellow-300 text-xl'>{Object.keys(info)[0]}:</h3>
-                  <p>{Object.values(info)[0]}</p>
-                </div>
+        <div className="absolute bottom-20 left-0 bg-white px-6 py-3 flex flex-col gap-2">
+          <h2 className="absolute -top-6 right-[-25px] text-4xl font-black px-4 py-1 leading-none [-webkit-text-stroke:0.5px_white] font-display">
+            DETAILS
+          </h2>
+
+          <div className="flex flex-col">
+            <h3 className="text-sm font-black uppercase">Dates:</h3>
+            <span className="text-base font-bold text-gray-800 tracking-tight">{dates}</span>
+          </div>
+
+          <div className="flex flex-col">
+            <h3 className="text-sm font-black uppercase">Location:</h3>
+            <div className="flex flex-col leading-tight">
+              {typeof location === 'string' ? (
+                <span className="text-base font-bold text-gray-800 tracking-tight">{location}</span>
+              ) : (
+                location
+              )}
+            </div>
+          </div>
+
+          <div className="flex flex-col">
+            <h3 className="text-sm font-black uppercase">Average Daily Distance:</h3>
+            <span className="text-base font-bold text-gray-800 tracking-tight">{averageDistance}</span>
+          </div>
+
+          <div className="flex flex-col">
+            <h3 className="text-sm font-black uppercase">Flights:</h3>
+            <span className="text-base font-bold text-gray-800 tracking-tight">{flights}</span>
+          </div>
+        </div>
+      </ParallaxSection>
+
+      <ParallaxSection useFade={false} imageUrl='/images/optimized/road-hero.jpg' height='h-[80%]' objectFit='contain'>
+        <div className="min-h-[60vh] w-full ml-[5%] flex flex-row justify-start gap-20 px-10 py-10">
+          {experienceTitle}
+        </div>
+
+        <div className="absolute bottom-20 right-0 bg-white px-6 py-8 flex flex-col gap-2 max-w-[20%]">
+          <h2 className="absolute -top-6 left-[-25px] uppercase text-4xl font-black px-4 py-1 leading-none [-webkit-text-stroke:0.5px_white] font-display">
+            Experience
+          </h2>
+
+          {experienceDescription}
+        </div>
+      </ParallaxSection>
+
+      <ParallaxSection useFade={false} imageUrl='/images/optimized/tours-hero.jpg' height='h-[80%]' objectFit='contain'>
+        <div className="min-h-[60vh] w-full">
+          <div className="absolute bottom-0 left-0 bg-white px-6 py-8 w-[30%]">
+            <h2 className="absolute -top-6 right-[-25px] text-4xl uppercase font-black px-4 py-1 leading-none [-webkit-text-stroke:0.5px_white] font-display">
+              What's included
+            </h2>
+
+            <ul className="list-disc list-inside flex flex-col gap-1">
+              {included.map((item, index) => (
+                <li key={index} className="text-base font-bold tracking-tight">
+                  {item}
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </ParallaxSection>
 
-      <ParallaxSection imageUrl={tour.images?.[2] || ''} height='h-[80%]'>
-        <div className="min-h-[70vh] flex flex-col gap-8 px-10">
-          <h2 className="w-full uppercase text-5xl md:text-8xl text-yellow-300 md:pr-[30%] text-center md:text-start">{tour.section2title}</h2>
+      {days?.length ? <TourTabs days={days as unknown as Record<string, string>[]} dayImages={dayImages as unknown as Record<string, string>[]} /> : null}
 
-          <div className='w-full flex flex-row justify-end'>
-            <div className='bg-black/40 p-4 md:max-w-xs rounded-xl'>
-              <h3 className='uppercase text-yellow-300 text-xl mb-4'>Experiences:</h3>
-              <p className='text-white text-lg font-light'>{tour.experiences}</p>
-            </div>
-          </div>
+      {notIncluded?.length ? (
+        <ParallaxSection useFade={false} imageUrl='/images/optimized/road-8.jpg' height='h-[80%]' objectFit='contain'>
+          <div className='min-h-[60vh]'>
+            <div className="absolute top-20 right-0 bg-white px-6 py-8 flex flex-col gap-2 w-[25%]">
+              <h2 className="absolute -top-6 left-[-25px] uppercase text-4xl font-black px-4 py-1 leading-none [-webkit-text-stroke:0.5px_white] font-display">
+                What's not included
+              </h2>
 
-        </div>
-      </ParallaxSection>
-
-      {tour.days?.length && <TourTabs days={tour.days as unknown as Record<string, string>[]} />}
-
-      <ParallaxSection useFade={false} imageUrl={tour.images?.[3] || ''} height='h-[80%]'>
-        <div className="min-h-[70vh] flex flex-col gap-20 px-10 py-10">
-          <div className="absolute inset-0 bg-white/40 z-[-1]" />
-          <h2 className="w-full uppercase text-5xl md:text-9xl text-white text-center">Ready to ride?</h2>
-
-          <div className='flex flex-col md:flex-row gap-20 justify-between min-w-[70vw] cursor-pointer'>
-            <Link href={'/contact'} className='border-4 border-black rounded-xl p-4 md:max-w-xs'>
-              <h3 className='uppercase text-3xl md:text-8xl text-black mx-auto text-center'>Book here</h3>
-            </Link>
-
-            <div className='w-full flex flex-row justify-end'>
-              <div className='bg-black/40 p-4 md:max-w-xs rounded-xl'>
-                <h3 className='uppercase text-yellow-300 text-2xl mb-4'>Prices & Packages:</h3>
-                {tour.prices?.map(info => (
-                  <div key={Object.keys(info)[0]} className='flex flex-row gap-4 justify-between text-white text-lg font-light'>
-                    <p className='text-xl'>{Object.keys(info)[0]}</p>
-                    <div className='text-xl border-l-2 border-white min-w-[70px] pl-1'>
-                      <p className='text-xl'>{Object.values(info)[0]}</p>
-                    </div>
-                  </div>
+              <ul className="list-disc list-inside flex flex-col gap-1">
+                {notIncluded.map((item, index) => (
+                  <li key={index} className="text-base font-bold tracking-tight">
+                    {item}
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
-        </div>
-      </ParallaxSection>
+
+        </ParallaxSection>
+      ) : null}
+
+      <TourContentBlock
+        imageUrl="/images/optimized/hotel-1.jpg"
+        imageScale='120%'
+        orientation="left"
+        subTitle='Pricing'
+        subTitleStyle='text-3xl md:text-5xl text-center'
+        description={<div className='flex flex-col gap-4 w-full pl-10 pt-6'>
+          {prices.map((item, index) => (
+            <div key={index} className='flex flex-col items-start w-full text-xl'>
+              <h3 className='text-xl uppercase'>{item.label}</h3>
+              <span className='text-lg'>{item.price}</span>
+            </div>
+          ))}
+        </div>}
+        events={[
+          { text: 'Book here', link: `/${lang}/contact` },
+        ]}
+      />
+
+      <ReadyToRide lang={lang} />
     </div>
   )
 }

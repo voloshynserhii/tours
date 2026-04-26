@@ -6,6 +6,7 @@ type Orientation = 'left' | 'right';
 
 interface ContentBlockProps {
   imageUrl: string;
+  imageScale?: string;
   orientation: Orientation;
   title?: string | React.ReactNode;
   subTitle?: string | React.ReactNode;
@@ -22,6 +23,7 @@ interface ContentBlockProps {
 
 export const TourContentBlock: React.FC<ContentBlockProps> = ({
   imageUrl,
+  imageScale = 1,
   orientation,
   title,
   subTitle,
@@ -36,12 +38,12 @@ export const TourContentBlock: React.FC<ContentBlockProps> = ({
 
   return (
     <div className={`relative w-full mx-auto min-h-[600px] flex flex-col md:flex-row ${isRightOriented ? '' : 'md:flex-row-reverse'}`}>
-
-      <div className="relative w-full md:w-[75%] min-h-[400px] md:min-h-[600px] flex-shrink-0">
+      <div className="relative w-full md:w-[75%] min-h-[400px] md:min-h-[600px] flex-shrink-0 overflow-hidden">
         <Image
           src={imageUrl}
           alt={title?.toString() || 'Content Image'}
           className="absolute inset-0 w-full h-full object-cover"
+          style={{ transform: `scale(${imageScale})` }}
           width={1000}
           height={800}
         />

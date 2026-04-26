@@ -37,9 +37,9 @@ export default async function Road({
         subTitle='SIMPLE, NO NONSENSE RIDING'
         description="From independent self-guided trips to fully supported experiences; everything is built around riding straigt from your doorstep."
         events={[
-          { text: 'SELF GUIDED', link: '#' },
-          { text: 'SHORT GUIDED', link: '#' },
-          { text: 'LONG GUIDED', link: '#' }
+          { text: 'SELF GUIDED', link: '/tours/self-guided' },
+          { text: 'SHORT GUIDED', link: '/tours/short-guided' },
+          { text: 'LONG GUIDED', link: '/tours/long-guided' }
         ]}
       />
 
@@ -65,7 +65,7 @@ export default async function Road({
           <p>La Vuelta, Mediterranean Epic, Millars UCI Gran Fondo and more!</p>
         </div>}
         events={[
-          { text: 'Events', link: '#' },
+          { text: 'Events', link: '/tours' },
         ]}
       />
 

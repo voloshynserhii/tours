@@ -5,35 +5,26 @@ import Image from 'next/image';
 
 interface TourTabsProps {
     days: { [day: string]: string }[];
+    dayImages: { [day: string]: string }[];
 }   
 
-export const TourTabs = ({ days }: TourTabsProps): JSX.Element => {
+export const TourTabs = ({ days, dayImages }: TourTabsProps): JSX.Element => {
     const [activeDay, setActiveDay] = useState(0);
 
     const currentDayKey = Object.keys(days[activeDay])[0];
     const currentDescription = days[activeDay][currentDayKey];
+    const currentImage = dayImages[activeDay][currentDayKey];
 
     return (
         <section className="relative flex flex-col md:flex-row w-full min-h-[500px] overflow-hidden">
             <div className="relative w-full md:w-2/3 bg-gray-200">
                 <Image
-                    src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070"
+                    src={currentImage || "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070"}
                     alt="Mountain route"
                     className="w-full h-full object-cover grayscale"
                     width={800}
                     height={600}
                 />
-                <div className="absolute bottom-10 left-10 text-white z-10 flex gap-12">
-                    <div>
-                        <p className="text-xs uppercase tracking-widest opacity-80">Distance</p>
-                        <p className="text-3xl font-bold">65.10 km</p>
-                    </div>
-                    <div>
-                        <p className="text-xs uppercase tracking-widest opacity-80">Elev Gain</p>
-                        <p className="text-3xl font-bold">886 m</p>
-                    </div>
-                </div>
-                <div className="absolute inset-0 bg-black/20" />
             </div>
 
             <div className="w-full md:w-1/3 p-4 md:p-8 flex flex-col items-center">
@@ -62,8 +53,8 @@ export const TourTabs = ({ days }: TourTabsProps): JSX.Element => {
                     })}
                 </div>
 
-                <div className="mt-8">
-                    <h2 className="text-7xl md:text-8xl uppercase mb-6 tracking-tighter">
+                <div className="mt-8 flex flex-col items-center text-center">
+                    <h2 className="text-7xl md:text-8xl uppercase mb-6">
                         DAY {currentDayKey}
                     </h2>
                     <p className="text-gray-700 leading-relaxed text-md max-w-md">

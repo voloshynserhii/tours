@@ -65,7 +65,9 @@ export default async function Accomodation({
       <TourContentBlock
         imageUrl="/images/optimized/food.jpeg"
         orientation="left"
-        subTitle='LA RUTA'
+        subTitle={
+          <Image src="/images/LaRuta-logo.png" alt="La Ruta Restaurante" className="w-full" width={400} height={100} />
+        }
         subTitleStyle='text-3xl md:text-6xl uppercase leading-[1] text-start'
         description={<div className='flex flex-col gap-6'>
           <p>Our Chefs have designed a menu to support your riding while keeping things relaxed and enjoyable.</p>

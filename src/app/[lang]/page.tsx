@@ -58,7 +58,8 @@ export default async function Home({
           <p>Our location is key. Where most cycling trips begin with a transfer, busy traﬃc, or boring routes to the “good bit”</p>
           <p>More we focus on qualitiy and less on crowds.</p>
           <p>Step outside the hotel and ride straight into the mountains.</p>
-        </div>} events={[
+        </div>} 
+        events={[
           { text: 'View Hotel', link: '#' },
         ]}
       />
