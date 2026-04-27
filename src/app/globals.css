@@ -17,13 +17,13 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter);
+  font-family: var(--font-poppins);
 }
 
 h1,
 h2,
 h3 {
-  font-family: var(--font-anton);
+  font-family: var(--font-archivo-black);
 }
 
 .date-input::-webkit-calendar-picker-indicator {

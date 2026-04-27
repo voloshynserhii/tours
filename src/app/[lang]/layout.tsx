@@ -1,9 +1,21 @@
 import type { Metadata } from 'next';
-import { Anton, Inter } from 'next/font/google';
+import { Anton, Inter, Archivo_Black, Poppins } from 'next/font/google';
 import Script from 'next/script';
 import '../globals.css';
 import { Header, Footer, Providers } from '@/components';
 import { getDictionary, Locale } from '@/get-dictionary';
+
+const archivoblack = Archivo_Black({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--font-archivo-black',
+});
+
+const poppins = Poppins({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--font-poppins',
+});
 
 const anton = Anton({
   weight: ['400'],
@@ -57,7 +69,7 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <body
-        className={`${anton.variable} ${inter.variable} antialiased bg-cream-50 text-stone-900`}
+        className={`${anton.variable} ${inter.variable} ${archivoblack.variable} ${poppins.variable} antialiased bg-cream-50 text-stone-900`}
         data-region={process.env.NEXT_PUBLIC_REGION ?? ''}
         data-channelcode={process.env.NEXT_PUBLIC_CHANNELCODE ?? ''}
       >
