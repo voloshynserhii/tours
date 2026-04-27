@@ -56,7 +56,7 @@ export const ParallaxSection = ({ imageUrl, videoUrl, children, className = "", 
   );
 
   return (
-    <section className={`relative overflow-hidden ${className}`}>
+    <section className={`relative overflow-hidden h-[60vh] md:h-[80vh] ${className}`}>
       {/* Desktop Parallax */}
       <div
         ref={parallax.ref}

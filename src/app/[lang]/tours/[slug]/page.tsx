@@ -55,7 +55,7 @@ export default async function Tour({
           {section1Title}
         </div>
 
-        <div className="absolute bottom-20 left-0 bg-white px-6 py-3 flex flex-col gap-2">
+        <div className="relative md:absolute bottom-4 md:bottom-20 left-0 right-0 md:right-auto mx-auto md:mx-0 w-[calc(100%-2rem)] max-w-md md:w-auto bg-white px-6 py-3 flex flex-col gap-2 shadow-xl">
           <h2 className="absolute -top-6 right-[-25px] text-4xl font-black px-4 py-1 leading-none [-webkit-text-stroke:0.5px_white] font-display">
             DETAILS
           </h2>
@@ -93,7 +93,7 @@ export default async function Tour({
           {experienceTitle}
         </div>
 
-        <div className="absolute bottom-20 right-0 bg-white px-6 py-8 flex flex-col gap-2 max-w-[20%]">
+        <div className="relative md:absolute bottom-4 md:bottom-20 left-0 md:left-auto right-0 mx-auto md:mx-0 w-[calc(100%-2rem)] max-w-md md:w-auto bg-white px-6 py-8 flex flex-col gap-2 shadow-xl">
           <h2 className="absolute -top-6 left-[-25px] uppercase text-4xl font-black px-4 py-1 leading-none [-webkit-text-stroke:0.5px_white] font-display">
             Experience
           </h2>
@@ -104,7 +104,7 @@ export default async function Tour({
 
       <ParallaxSection useFade={false} imageUrl='/images/optimized/tours-hero.jpg' height='h-[80%]' objectFit='contain'>
         <div className="min-h-[60vh] w-full">
-          <div className="absolute bottom-0 left-0 bg-white px-6 py-8 w-[30%]">
+<div className="relative md:absolute bottom-4 md:bottom-0 left-0 right-0 md:right-auto mx-auto md:mx-0 w-[calc(100%-2rem)] max-w-md md:w-[30%] bg-white px-6 py-8">
             <h2 className="absolute -top-6 right-[-25px] text-4xl uppercase font-black px-4 py-1 leading-none [-webkit-text-stroke:0.5px_white] font-display">
               What's included
             </h2>
@@ -125,7 +125,7 @@ export default async function Tour({
       {notIncluded?.length ? (
         <ParallaxSection useFade={false} imageUrl='/images/optimized/road-8.jpg' height='h-[80%]' objectFit='contain'>
           <div className='min-h-[60vh]'>
-            <div className="absolute top-20 right-0 bg-white px-6 py-8 flex flex-col gap-2 w-[25%]">
+            <div className="relative md:absolute top-4 md:top-20 left-0 md:left-auto right-0 mx-auto md:mx-0 w-[calc(100%-2rem)] max-w-md md:w-[25%] bg-white px-6 py-8 flex flex-col gap-2">
               <h2 className="absolute -top-6 left-[-25px] uppercase text-4xl font-black px-4 py-1 leading-none [-webkit-text-stroke:0.5px_white] font-display">
                 What's not included
               </h2>

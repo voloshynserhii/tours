@@ -29,7 +29,7 @@ export default async function Home({
           </div>
         </div>
 
-        <div className='absolute bottom-[50%] left-0 translate-y-1/2 p-8 bg-white max-w-lg flex flex-col gap-6'>
+        <div className='relative md:absolute bottom-4 md:bottom-[50%] left-0 right-0 md:right-auto mx-auto md:mx-0 w-[calc(100%-2rem)] max-w-lg bg-white p-8 flex flex-col gap-6'>
           <p className='text-lg font-bold'>Discover one of Spain’s last truly undiscovered cycling regions</p>
           <p className='text-lg font-bold'>Located at the foot of the Maestrat mountains, Castellón Cycling Co. gives you direct access to smooth Spanish tarmac, epic climbs, and quiet roads.</p>
           <p className='text-lg font-bold'>Ride without the crowds or logistics of traditional cycling destinations.</p>

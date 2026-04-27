@@ -28,7 +28,7 @@ export const TourTabs = ({ days, dayImages }: TourTabsProps): JSX.Element => {
             </div>
 
             <div className="w-full md:w-1/3 p-4 md:p-8 flex flex-col items-center">
-                <div className="absolute top-0 right-0 flex flex-col md:flex-row">
+                <div className="relative md:absolute top-0 right-0 flex flex-col md:flex-row gap-3 w-full md:w-auto">
                     {days.map((_, index) => {
                         const dayNum = Object.keys(days[index])[0];
                         const isActive = activeDay === index;
