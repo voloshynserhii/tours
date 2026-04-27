@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import { Anton, Inter, Archivo_Black, Poppins } from 'next/font/google';
+import { Anton, Inter, Archivo, Poppins } from 'next/font/google';
 import Script from 'next/script';
 import '../globals.css';
 import { Header, Footer, Providers } from '@/components';
 import { getDictionary, Locale } from '@/get-dictionary';
 
-const archivoblack = Archivo_Black({
-  weight: ['400'],
+const archivoblack = Archivo({
+  weight: ['900'],
   subsets: ['latin'],
   variable: '--font-archivo-black',
 });
