@@ -13,7 +13,7 @@ interface Props {
   objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
 }
 
-export const ParallaxSection = ({ imageUrl, videoUrl, children, className = "", useFade = true, height = "h-full", objectFit = "cover" }: Props) => {
+export const ParallaxSection = ({ imageUrl, videoUrl, children, className = "", useFade = true, height = "h-[80vh]", objectFit = "cover" }: Props) => {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
@@ -56,7 +56,7 @@ export const ParallaxSection = ({ imageUrl, videoUrl, children, className = "", 
   );
 
   return (
-    <section className={`relative overflow-hidden h-[60vh] md:h-[80vh] ${className}`}>
+    <section className={`relative overflow-hidden h-[60vh] md:${height} ${className}`}>
       {/* Desktop Parallax */}
       <div
         ref={parallax.ref}

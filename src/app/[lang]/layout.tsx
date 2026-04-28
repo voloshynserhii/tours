@@ -6,7 +6,7 @@ import { Header, Footer, Providers } from '@/components';
 import { getDictionary, Locale } from '@/get-dictionary';
 
 const archivoblack = Archivo({
-  weight: ['900'],
+  weight: ['400', '600', '800', '900'],
   subsets: ['latin'],
   variable: '--font-archivo-black',
 });
